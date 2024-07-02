@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./*"],
+      "@/comps": ["./app/components"],
+      "@/base": ["./app/components/base"],
+      "@/basecomps":["./lib/basecomponents"]
+    }
+  }
+}
