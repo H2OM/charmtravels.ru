@@ -6,6 +6,6 @@ module.exports = {
     // assetPrefix: '/node/',
     sassOptions: {
         includePaths: [path.join(__dirname, 'styles')],
-        prependData: `@import "./scss/common/_Vars.scss";`
+        prependData: `@import "./scss/common/vars.scss";`
     }
 }

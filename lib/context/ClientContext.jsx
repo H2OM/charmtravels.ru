@@ -5,13 +5,14 @@ import { createContext, useEffect, useState } from "react";
 const ClientContext = createContext();
 
 export const ClientProvider = ({children}) => {
-    const [modalForm, setModalForm] = useState(false);
-    const [mobileMenu, setMobileMenu] = useState(false);
     const [scroll, setScroll] = useState(0);
     const [clientWidth, setClientWidth] = useState(0);
-    const [headerInvert, setHeaderInvert] = useState(false);
-    const [notification, setNotification] = useState({message: false, status: true, closing: false });
     const [isDesktop, setDesktop] = useState(null);
+
+    const [modalForm, setModalForm] = useState(false);
+    const [mobileMenu, setMobileMenu] = useState(false);
+    const [notification, setNotification] = useState({message: false, status: true, closing: false });
+
     const pathname = usePathname();
     useEffect(()=>{
         if(modalForm === true) setModalForm("setClose");
@@ -73,8 +74,6 @@ export const ClientProvider = ({children}) => {
             value={{
                 scroll,
                 clientWidth,
-                headerInvert,
-                setHeaderInvert,
                 modalForm,
                 setModalForm,
                 notification,
