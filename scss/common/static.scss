@@ -1,0 +1,60 @@
+.static {
+    &__link {
+        position: relative;
+        display: block;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        text-decoration: none;
+        color: $zero;
+        transition: 0.2s all linear;
+        &:hover {
+            color: $three;
+        }
+        &_svg {
+            height: 28px;
+            transition: 0.8s all;
+            &:hover {
+                transform: rotate(360deg);
+            }
+        }
+        &_btn {
+            display: block;
+            width:  max-content;
+            transition: 0.2s all linear;
+            border: 1px solid $six;
+            border-radius: 26px;
+            padding: 10px 20px;
+            margin-left: -20px;
+            &:hover {
+                border: 1px solid $five;
+                color: $five;
+            }
+        }
+    }
+    &__info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        a, span, h1 {
+            text-align: right;
+            font-size: 18px;
+            font-weight: 400;
+            color: #818181;
+        }
+        a {
+            color: $zero;
+            font-weight: 500;
+            transition: 0.2s all linear;
+            &:hover {
+                color: $three;
+            }
+        }
+    }
+    &__title {
+        font-size: 38px;
+        font-weight: 600;
+        color: $zero;
+    }
+}

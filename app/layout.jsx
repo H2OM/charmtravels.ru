@@ -3,6 +3,7 @@ import localFont from 'next/font/local';
 import { ClientProvider } from "@/lib/context/ClientContext";
 import Header from "@/components/header/server/Header";
 import Popup from "@/components/popup/server/Popup";
+import Footer from "@/components/footer/server/Footer";
 
 const montserrat = localFont({
   src: [
@@ -111,10 +112,10 @@ export default function RootLayout({ children }) {
       <ClientProvider>
         <Popup/>
         <Header/>
-        <main style={{overflowX: "hidden", height: "200vh"}}>
+        <main>
           {children}
         </main>
-        {/*<Footer/>*/}
+        <Footer/>
       </ClientProvider>
       </body>
     </html>

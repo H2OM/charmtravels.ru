@@ -9,7 +9,7 @@ export default function Openmenu({children, title}) {
 
     return (
         <div className={"header__nav__open " + (isOpen ? "header__nav__open_show" : "")}>
-            <button className={"header__nav__open__trigger header__nav__link"}
+            <button className={"header__nav__open__trigger static__link"}
                     onClick={() => triggerOpen(prev => !prev)}
                     onBlur={()=>triggerOpen(false)}>
                 {title}

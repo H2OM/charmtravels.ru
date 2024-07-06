@@ -4,81 +4,84 @@ import Image from "next/image";
 import "../header.scss";
 import Navigation from "@/components/header/client/Navigation";
 import HeaderMover from "@/components/header/client/HeaderMover";
+import {ADDRESS, NUMBER} from "@/lib/info/Info";
 
 export default function Header() {
     return (
         <header className={"header"}>
             <div className="container">
                 <div className="header__static">
-                    <Image
-                        src={"/logo/logo.png"}
-                        className={"header__static__logo"}
-                        alt={"logo"}
-                        height={0}
-                        width={0}
-                        sizes="100vw"
-                        quality={100}
-                        priority={true}
-                    />
-                    <div className="header__static__info">
-                        <Link href={"tel:+79182170638"}>+7 (918) 217-06-38</Link>
-                        <span>Краснодар, проспект Чекистов, 28</span>
+                    <Link href={"/"} style={{display: "contents"}}>
+                        <Image
+                            src={"/logo/logo.png"}
+                            className={"header__static__logo"}
+                            alt={"logo"}
+                            height={0}
+                            width={0}
+                            sizes="100vw"
+                            quality={100}
+                            priority={true}
+                        />
+                    </Link>
+                    <div className="static__info">
+                        <Link href={"tel:+79182170638"}>{NUMBER}</Link>
+                        <h1>{ADDRESS}</h1>
                     </div>
                 </div>
                 <HeaderMover>
                     <div className="container header__nav__wrap">
                         <div className={"header__nav__mobile header__nav__mobile__logo"}>
                             <Image
-                               src={"/logo/logo.png"}
-                               alt={"logo"}
-                               height={0}
-                               width={0}
-                               sizes="100vw"
-                               quality={100}
-                               priority={true}
+                                src={"/logo/logo.png"}
+                                alt={"logo"}
+                                height={0}
+                                width={0}
+                                sizes="100vw"
+                                quality={100}
+                                priority={true}
                             />
                         </div>
                         <Navigation>
-                            <Link href={"/hot"} className={"header__nav__link"}>Горящие туры</Link>
-                            <Link href={"/faq"} className={"header__nav__link"}>Часто задаваемые вопросы</Link>
-                            <Link href={"/contacts"} className={"header__nav__link"}>Контакты</Link>
-                            <div className={"header__nav__link"}>
+                            <Link href={"/hot"} className={"static__link hl_after"}>Горящие туры</Link>
+                            <Link href={"/faq"} className={"static__link hl_after"}>Часто задаваемые вопросы</Link>
+                            <Link href={"/contacts"} className={"static__link hl_after"}>Контакты</Link>
+                            <div className={"static__link hl_after"}>
                                 <Openmenu title={"Услуги"}>
                                     <ul className={"header__nav__open__menu__list"}>
                                         <li className={"header__nav__open__menu__list__item"}>
-                                            <Link href={"/tickets"} className={"header__nav__link"}>Авиабилеты</Link>
+                                            <Link href={"/services#tours"} className={"static__link"}>Туры</Link>
                                         </li>
                                         <li className={"header__nav__open__menu__list__item"}>
-                                            <Link href={"/cruises"} className={"header__nav__link"}>Круизы</Link>
+                                            <Link href={"/services#cruises"} className={"static__link"}>Круизы</Link>
                                         </li>
                                         <li className={"header__nav__open__menu__list__item"}>
-                                            <Link href={"/vises"} className={"header__nav__link"}>Визы</Link>
+                                            <Link href={"/services#tickets"} className={"static__link"}>Авиабилеты</Link>
                                         </li>
                                         <li className={"header__nav__open__menu__list__item"}>
-                                            <Link href={"/tours"} className={"header__nav__link"}>Туры</Link>
+                                            <Link href={"/services#vises"} className={"static__link"}>Визы</Link>
                                         </li>
                                     </ul>
                                 </Openmenu>
                             </div>
-                            <div className={"header__nav__link"}>
+                            <div className={"static__link hl_after"}>
                                 <Openmenu title={"О компании"}>
                                     <ul className={"header__nav__open__menu__list"}>
                                         <li className={"header__nav__open__menu__list__item"}>
-                                            <Link href={"/about"} className={"header__nav__link"}>О нас</Link>
+                                            <Link href={"/company#about"} className={"static__link"}>О нас</Link>
                                         </li>
                                         <li className={"header__nav__open__menu__list__item"}>
-                                            <Link href={"/feedback"} className={"header__nav__link"}>Отзывы</Link>
+                                            <Link href={"/company#team"} className={"static__link"}>Наша команда</Link>
+
                                         </li>
                                         <li className={"header__nav__open__menu__list__item"}>
-                                            <Link href={"/team"} className={"header__nav__link"}>Наша команда</Link>
+                                            <Link href={"/company#achievements"} className={"static__link"}>Достижения</Link>
                                         </li>
                                         <li className={"header__nav__open__menu__list__item"}>
-                                            <Link href={"/achievements"}
-                                                  className={"header__nav__link"}>Достижения</Link>
-                                        </li>
-                                        <li className={"header__nav__open__menu__list__item"}>
-                                            <Link href={"/stages"} className={"header__nav__link"}>Этапы нашей
+                                            <Link href={"/company#stages"} className={"static__link"}>Этапы нашей
                                                 работы</Link>
+                                        </li>
+                                        <li className={"header__nav__open__menu__list__item"}>
+                                            <Link href={"/company#feedback"} className={"static__link"}>Отзывы</Link>
                                         </li>
                                     </ul>
                                 </Openmenu>
@@ -86,10 +89,11 @@ export default function Header() {
                         </Navigation>
 
                         <div className="header__nav__wrap__buttons">
-                            <button className={"header__nav__popup__btn header__nav__link"}>
-                                Подбор тура
-                            </button>
-                            <Link href={"https://whatsapp.com"} className={"header__nav__link_svg"}>
+                            <Link href={"https://forms.gle/B3nf1tf7T4zQjgUcA"}
+                                  className={"static__link_btn static__link"}>
+                                  Подбор тура
+                            </Link>
+                            <Link href={"https://whatsapp.com"} className={"static__link_svg"}>
                                 <svg width="29" height="28" viewBox="0 0 29 28" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <rect className="tgo-color" x="0.258667" width="28" height="28" rx="14"

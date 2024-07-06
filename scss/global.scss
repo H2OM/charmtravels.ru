@@ -41,6 +41,15 @@ body {
     position: relative;
     width: 1700px;
 }
+main {
+    overflow-x: hidden;
+    height: 200vh;
+    padding-bottom: 100px;
+    margin-top: -30px;
+}
+section {
+    padding-top: 135px;
+}
 @media (max-width: 1730px) {
     .container {
         width: auto;
