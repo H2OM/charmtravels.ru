@@ -31,7 +31,15 @@
         width: 100%;
         &_collapse {
             position: fixed;
-            top: 30px !important;
+            animation: nav-slide-down 0.4s forwards ease-out;
+            @keyframes nav-slide-down {
+                from {
+                    top: -50%;
+                }
+                to {
+                    top: 30px;
+                }
+            }
         }
         &__wrap {
             display: flex;
