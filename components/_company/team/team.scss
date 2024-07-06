@@ -1,0 +1,28 @@
+.team {
+    &__slider {
+        overflow-x: hidden;
+        &__bar {
+            display: flex;
+        }
+        &__content {
+            display: flex;
+            width: max-content;
+            &__item {
+                display: flex;
+                justify-content: space-between;
+                &__image {
+                    width: auto;
+                    height: 400px;
+                }
+                &__main {
+                    &__links {
+                        display: flex;
+                        &__socs {
+                            display: flex;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
