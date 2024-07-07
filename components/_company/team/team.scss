@@ -1,28 +1,208 @@
 .team {
     &__slider {
+        position: relative;
         overflow-x: hidden;
+        overflow-y: visible;
+        display: flex;
+        flex-direction: column;
+        gap: 80px;
+        padding-top: 50px;
+        margin-top: -50px;
+
         &__bar {
-            display: flex;
-        }
-        &__content {
-            display: flex;
-            width: max-content;
+            position: relative;
+            gap: 20px;
+            display: grid;
+            grid-template-columns: repeat(4, calc((100% / 4) - 17.5px));
+            grid-auto-columns: calc((100% / 4) - 17.5px);
+            grid-auto-flow: column;
+            padding-bottom: 10px;
+            overflow-y: visible;
+            transition: 0.2s all;
+            &::-webkit-scrollbar-button {
+                display: none;
+            }
+
+            &::-webkit-scrollbar {
+                background-color: unset;
+                height: 6px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: $six;
+            }
+
             &__item {
                 display: flex;
-                justify-content: space-between;
+                cursor: pointer;
+                position: relative;
+                height: 100px;
+                width: 100%;
+                align-items: center;
+                background-color: #fff;
+                border: 1px solid $eight;
+                border-radius: 10px;
+                padding: 0 10px;
+                gap: 24px;
+                color: $zero;
+                transition: 0.2s all;
+                box-shadow: 10px 10px 0px 0px $six,
+                0px 0px 0px 0px $eight;
+                z-index: 2;
+
+                &.active {
+                    border: 0px solid $eight;
+                    background-color: $five;
+                    box-shadow: 0px 0px 0px 0px $six,
+                    0px 15px 15px 0px $eight;
+                    color: $seven;
+                    transform: translate(10px, 10px);
+
+                    .team__slider__bar__item {
+                        &__image__wrap {
+                            border: 2px solid $eight;
+                        }
+                        &__title {
+                            span {
+                                color: #c9c9c9;
+                            }
+                        }
+                    }
+                }
+
+                &__image {
+                    &__wrap {
+                        border-radius: 100%;
+                        overflow: hidden;
+                        width: 80px;
+                        min-width: 80px;
+                        height: 80px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: flex-start;
+                        border: 2px solid $six;
+                    }
+                }
+
+                &__title {
+                    font-weight: 500;
+                    font-size: 16px;
+                    display: flex;
+                    flex-direction: column;
+
+                    span {
+                        font-size: 13px;
+                        color: $gray;
+                    }
+                }
+            }
+
+            &__nav {
+                position: absolute;
+                right: 0;
+                top: 0;
+                display: flex;
+                gap: 16px;
+            }
+        }
+        &__wrap {
+            position: relative;
+            .static__nav__left, .static__nav__right {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            .static__nav__left {
+                left: 0;
+            }
+            .static__nav__right {
+                right: 0;
+            }
+        }
+        &__window {
+            position: relative;
+            margin: 0 100px;
+            overflow-x: hidden;
+        }
+        &__content {
+            display: grid;
+            grid-template-columns: 100%;
+            grid-auto-columns: 100%;
+            grid-auto-flow: column;
+            width: 100%;
+            transition: 0.2s all;
+            &__item {
+                display: flex;
+                gap: 130px;
                 &__image {
                     width: auto;
                     height: 400px;
+                    border-radius: 12px;
+                    box-shadow: 10px 10px 0px 0px $six;
+                    margin-bottom: 10px;
                 }
+
                 &__main {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 26px;
+                    font-size: 20px;
+                    font-weight: 400;
+                    overflow-y: hidden;
+                    color: $zero;
+                    .static__title {
+                        margin-bottom: 0;
+                    }
+                    &__titles {
+                        &__title {
+                            display: flex;
+                            align-items: center;
+                            gap: 12px;
+                            &:before {
+                                content: "";
+                                width: 12px;
+                                height: 7px;
+                                display: inline-block;
+                                background-image: url('./../../../public/svg/link-splitter_green.svg');
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                            }
+                        }
+                    }
+                    &__describe {
+                        line-height: 32px;
+                    }
                     &__links {
                         display: flex;
+                        align-items: center;
+                        justify-content: flex-start;
+                        gap: 18px;
+                        margin-top: 20px;
+                        .static__link {
+                            border-radius: 10px;
+                            border: 1px solid $six;
+                            padding: 16px 28px;
+                            &:hover {
+                                border: 1px solid $five;
+                            }
+                        }
                         &__socs {
                             display: flex;
+                            margin-left: 26px;
+                            gap: 32px;
+                            a {
+                                height: 24px;
+                            }
                         }
                     }
                 }
             }
         }
+    }
+}
+
+@media (max-width: 1000px) {
+    .team__slider__bar {
+        overflow-x: auto;
     }
 }

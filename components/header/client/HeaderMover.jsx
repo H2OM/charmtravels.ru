@@ -21,7 +21,6 @@ export default function HeaderMover({children}) {
     }, [ref]);
 
     useEffect(() => {
-        console.log(refInfo.refTop);
         if(scroll > (refInfo.refHeight + refInfo.refTop + 30) && !ref.current.classList.contains('header__nav_collapse')) {
             ref.current.classList.add('header__nav_collapse');
         } else if(scroll <= (refInfo.refTop - 30) && ref.current.classList.contains('header__nav_collapse')) {

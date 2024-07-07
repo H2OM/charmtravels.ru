@@ -8,6 +8,7 @@
         text-decoration: none;
         color: $zero;
         transition: 0.2s all linear;
+        height: max-content;
         &:hover {
             color: $three;
         }
@@ -69,6 +70,42 @@
         color: $zero;
         span {
             font-weight: 600;
+        }
+    }
+    &__nav {
+        &__left, &__right {
+            position: relative;
+            width: 35px;
+            height: 35px;
+            border-radius: 8px;
+            border: 1px solid $five;
+            transition: 0.2s all;
+            &::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                transform-origin: center center;
+                width: 8px;
+                height: 8px;
+                border-left: 1px solid $five;
+                border-bottom: 1px solid $five;
+            }
+            &:hover {
+                background-color: $eight;
+            }
+        }
+        &__left {
+            &::after {
+                left: calc(50% + 2px);
+                transform: translate(-50%, -50%) rotate(45deg);
+            }
+        }
+        &__right {
+            &::after {
+                left: calc(50% - 2px);
+                transform: translate(-50%, -50%) rotate(225deg);
+            }
         }
     }
 }
