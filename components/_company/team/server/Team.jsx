@@ -92,7 +92,7 @@ export default async function Team() {
                                                 }
                                                 {
                                                     each.mail.length > 0 &&
-                                                    <Link href={`email:${each.mail}`}
+                                                    <Link href={`mailto:${each.mail}`}
                                                           className={"static__link"}>
                                                         {each.mail}
                                                     </Link>
