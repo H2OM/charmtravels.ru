@@ -1,9 +1,88 @@
+@font-face {
+    font-family: DIN Pro Cond;
+    src: url('../../../public/fonts/DINPro-CondensedBold.woff2') format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap
+}
 .advantages {
     &__content {
-        transition: 0.2s all;
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+        transition: 0.4s all;
         opacity: 0;
         &_visible {
             opacity: 1;
+            .advantages__content__block {
+                &:before {
+                    width: 100%;
+                }
+                &:first-child {
+                    &:after {
+                        width: 100%;
+                    }
+                }
+            }
         }
+        &__block {
+            position: relative;
+            display: flex;
+            gap: 60px;
+            padding: 30px 0;
+            &:before {
+                content: "";
+                position: absolute;
+                height: 1px;
+                width: 0%;
+                background-color: rgba(17,17,17,.24);
+                transition: 4s 0.4s all;
+            }
+
+            &:before {
+                bottom: 0;
+            }
+            &:first-child {
+                &:after {
+                    top: 0;
+                    content: "";
+                    position: absolute;
+                    height: 1px;
+                    width: 0%;
+                    background-color: rgba(17,17,17,.24);
+                    transition: 4s 0.4s all;
+                    right: 0;
+                }
+            }
+            &:nth-child(odd) {
+                &:before {
+                    left: 0;
+                }
+            }
+            &:nth-child(even) {
+                &:before {
+                    right: 0;
+                }
+            }
+            &__wrap {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 20px;
+            }
+            &__count {
+                display: flex;
+                align-items: center;
+                font-size: 112px;
+                color: rgba(17,17,17,.24);
+                font-family: DIN Pro Cond, helvetica, arial, sans-serif;
+            }
+            &__text {
+                font-size: 20px;
+                color: $zero;
+                line-height: 36px;
+            }
+        }
+
     }
 }

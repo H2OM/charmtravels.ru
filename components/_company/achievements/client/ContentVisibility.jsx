@@ -9,8 +9,6 @@ export default function ContentVisibility({children}) {
     const {scroll} = useContext(ClientContext);
 
     useEffect(() => {
-        console.log(refOffset);
-        console.log(scroll);
         if (!isVisible && refOffset && scroll >= (refOffset - (window.innerHeight / 1.5))) {
             setVisible(true);
         }
