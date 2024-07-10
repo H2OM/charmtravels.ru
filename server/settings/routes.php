@@ -1,4 +1,4 @@
 <?php
     return [
-        '^api/company/([a-z0-9-_]+)$'=>'Company',
+        '^api/company/([a-z0-9-_]+)$'=>'CompanyController',
     ];

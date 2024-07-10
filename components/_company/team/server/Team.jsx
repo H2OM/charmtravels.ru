@@ -1,41 +1,20 @@
 import '../team.scss';
-import {headers} from "next/headers";
 import Image from "next/image";
 import Link from "next/link";
 import TeamSlider from "@/components/_company/team/client/TeamSlider";
+import ErrorBlock from "@/lib/basecomponents/errorblock/ErrorBlock";
 
-export default async function Team() {
+export default async function Team({data}) {
 
-    const host = headers().get('x-forwarded-proto') + "://" + headers().get('x-forwarded-host');
-
-    const data = await fetch(`${host}/api/company/get-actual-team`, {method: 'GET', cache: "no-cache"})
-        .then(response => {
-            if (!response.ok) {
-                return false;
-            }
-
-            return response.json();
-        })
-        .then(data => {
-            if (data.content === undefined || data.content.length === 0) {
-                return false;
-            }
-
-            return data;
-        })
-        .catch((e) => {
-            console.log(e);
-            return false;
-        });
     return (
         <section className={"team"} id={"team"}>
             <div className="container">
                 <h2 className={"static__title"}>Наша команда</h2>
                 {
                     data &&
-                    <TeamSlider data={data.content}>
+                    <TeamSlider data={data}>
                         {
-                            data.content.map((each, i) => {
+                            data.map((each, i) => {
                                 return (
                                     <div className={"team__slider__content__item"} key={each.name + i}>
                                         <Image
@@ -134,7 +113,7 @@ export default async function Team() {
                     </TeamSlider>
                 }
                 {
-                    !data && <div>Error</div>
+                    !data && <ErrorBlock/>
                 }
             </div>
         </section>

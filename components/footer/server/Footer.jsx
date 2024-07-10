@@ -59,7 +59,7 @@ export default function Footer() {
                                 <div className="footer__content__main__block__section__items">
                                     <Link href={"/company#about"} className={"static__link"}>О нас</Link>
                                     <Link href={"/company#team"} className={"static__link"}>Наша команда</Link>
-                                    <Link href={"/company#achievements"} className={"static__link"}>Достижения</Link>
+                                    <Link href={"/company#advantages"} className={"static__link"}>Наши преимущества</Link>
                                     <Link href={"/company#stages"} className={"static__link"}>Этапы нашей работы</Link>
                                     <Link href={"/company#feedback"} className={"static__link"}>Отзывы</Link>
                                     <Link href={"/contacts"} className={"static__link"}>Контакты</Link>

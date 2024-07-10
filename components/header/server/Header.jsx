@@ -74,7 +74,7 @@ export default function Header() {
 
                                         </li>
                                         <li className={"header__nav__open__menu__list__item"}>
-                                            <Link href={"/company#achievements"} className={"static__link"}>Достижения</Link>
+                                            <Link href={"/company#advantages"} className={"static__link"}>Наши преимущества</Link>
                                         </li>
                                         <li className={"header__nav__open__menu__list__item"}>
                                             <Link href={"/company#stages"} className={"static__link"}>Этапы нашей

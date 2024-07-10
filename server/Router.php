@@ -23,14 +23,13 @@
                     return true;
                 }
 
-                $this->routing = "app\\modules\\" . $this->routing;
+                $this->routing = "app\\controllers\\" . $this->routing;
 
                 $this->tempClass = new $this->routing();
 
                 $this->formatQuery();
 
                 if(method_exists($this->tempClass, $this->query)) {
-                    // HcheckFetch();
                     return true;
                 } else {
                     return false;
