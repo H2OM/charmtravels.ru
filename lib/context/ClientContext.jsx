@@ -8,12 +8,11 @@ export const ClientProvider = ({children}) => {
     const [scroll, setScroll] = useState(0);
     const [clientWidth, setClientWidth] = useState(0);
     const [isDesktop, setDesktop] = useState(null);
-
     const [modalForm, setModalForm] = useState(false);
     const [mobileMenu, setMobileMenu] = useState(false);
     const [notification, setNotification] = useState({message: false, status: true, closing: false });
-
     const pathname = usePathname();
+
     useEffect(()=>{
         if(modalForm === true) setModalForm("setClose");
         if(mobileMenu === true) setMobileMenu("close");
