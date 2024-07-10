@@ -14,10 +14,64 @@ class CompanyController extends Runner
         $response = ["content" => [
             "team" => $this->get_team(),
             "advantages" => $this->get_advantages(),
-            "stages"=>$this->get_stages()
+            "stages"=>$this->get_stages(),
+            "feedback"=>$this->get_feedback()
         ]];
 
         exit(json_encode($response));
+    }
+
+    /**
+     * Action блока 'отзывы'
+     *
+     * @return void
+     */
+    protected function getFedback(): void
+    {
+        exit(json_encode(["content" => $this->get_feedback()]));
+    }
+
+    /**
+     * Получение блока 'отзывы'
+     *
+     * @return array
+     */
+    function get_feedback(): array
+    {
+        return [
+            [
+                "title"=>"Туристы вернулись с Египта и рассказали, как все прошло",
+                "image"=>"/company/feedback/09f91433-c6b8-4f94-a731-9c4db58766de.png"
+            ],
+            [
+                "title"=>"Туристы отдыхали в Турции и рассказали о своих впечатлениях",
+                "image"=>"/company/feedback/75584187-33d6-480f-9dcc-ed776c9ca887.png"
+            ],
+            [
+                "title"=>"Туристы поделились отзывом после отдыха на Мальдивах",
+                "image"=>"/company/feedback/39205206-1de2-41ca-8fd0-f580eb6b7425.png"
+            ],
+            [
+                "title"=>"Туристы вернулись с Египта и рассказали, как все прошло",
+                "image"=>"/company/feedback/09f91433-c6b8-4f94-a731-9c4db58766de.png"
+            ],
+            [
+                "title"=>"Туристы отдыхали в Турции и рассказали о своих впечатлениях",
+                "image"=>"/company/feedback/75584187-33d6-480f-9dcc-ed776c9ca887.png"
+            ],
+            [
+                "title"=>"Туристы поделились отзывом после отдыха на Мальдивах",
+                "image"=>"/company/feedback/39205206-1de2-41ca-8fd0-f580eb6b7425.png"
+            ],
+            [
+                "title"=>"Туристы отдыхали в Турции и рассказали о своих впечатлениях",
+                "image"=>"/company/feedback/75584187-33d6-480f-9dcc-ed776c9ca887.png"
+            ],
+            [
+                "title"=>"Туристы поделились отзывом после отдыха на Мальдивах",
+                "image"=>"/company/feedback/39205206-1de2-41ca-8fd0-f580eb6b7425.png"
+            ]
+        ];
     }
 
     /**

@@ -9,7 +9,6 @@ export default function TeamSlider({data, children}) {
     const [currentNavBar, setCurrentNavBar] = useState(0);
     const [itmCountInNavBar, setItmCountInNavBar] = useState(0);
     const incNavBar = (count = 1) => {
-        console.log(count);
         if ((currentNavBar + itmCountInNavBar + count) <= data.length) {
             setCurrentNavBar((prev) => prev + count);
         } else  {
@@ -35,8 +34,6 @@ export default function TeamSlider({data, children}) {
     const decSlider = () => {
         if (currentSlide - 1 >= 0) {
             setCurrentSlide(prev => prev - 1);
-            console.log(currentSlide - 1);
-            console.log(currentNavBar);
             if((currentSlide - 1) < currentNavBar) {
                 decNavBar(itmCountInNavBar);
             }

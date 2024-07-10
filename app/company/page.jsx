@@ -11,17 +11,18 @@ export default async function Page() {
     const IS_TEAM_ISSET = (COMPANY_INFO.content !== undefined && COMPANY_INFO.content.team !== undefined);
     const IS_ADV_ISSET = (COMPANY_INFO.content !== undefined && COMPANY_INFO.content.advantages !== undefined);
     const IS_STAGES_ISSET = (COMPANY_INFO.content !== undefined && COMPANY_INFO.content.stages !== undefined);
+    const IS_FEEDBACK_ISSET = (COMPANY_INFO.content !== undefined && COMPANY_INFO.content.feedback !== undefined);
     const TEAM = IS_TEAM_ISSET ? COMPANY_INFO.content.team : false;
     const ADV = IS_ADV_ISSET ? COMPANY_INFO.content.advantages : false;
     const STAGES = IS_STAGES_ISSET ? COMPANY_INFO.content.stages : false;
-
+    const FEEDBACK = IS_FEEDBACK_ISSET ? COMPANY_INFO.content.feedback : false;
     return (
         <>
             <About/>
             <Team data={TEAM}/>
             <Advantages data={ADV}/>
             <Stages data={STAGES}/>
-            <Feedback/>
+            <Feedback data={FEEDBACK}/>
         </>
     )
 }

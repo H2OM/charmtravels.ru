@@ -1,0 +1,47 @@
+.feedback {
+    &__slider {
+        position: relative;
+        margin-top: 40px;
+        &__wrap {
+            margin: 0 100px;
+            overflow: hidden;
+        }
+
+        &__window {
+            display: grid;
+            grid-template-columns: calc(100% / 3 - 27px);
+            grid-auto-columns: calc(100% / 3 - 27px);
+            grid-auto-flow: column;
+            width: 100%;
+            transition: 0.6s all;
+            gap: 40px;
+        }
+
+        &__block {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 24px;
+            text-align: center;
+            &__image {
+                height: 500px;
+                width: fit-content;
+                border-radius: 14px;
+                box-shadow: 10px 10px 0px 0px $six;
+            }
+        }
+
+        .static__nav__left, .static__nav__right {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .static__nav__left {
+            left: 0;
+        }
+        .static__nav__right {
+            right: 0;
+        }
+    }
+}
