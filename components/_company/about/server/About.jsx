@@ -1,6 +1,6 @@
 import '../about.scss';
 import Image from "next/image";
-
+// TODO почему нас выбирают
 export default function About() {
     return (
         <section className={"about"} id={"about"}>

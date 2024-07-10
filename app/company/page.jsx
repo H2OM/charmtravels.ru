@@ -10,15 +10,17 @@ export default async function Page() {
     const COMPANY_INFO = await GET_DATA({controller: 'company', action: 'get-company-info'});
     const IS_TEAM_ISSET = (COMPANY_INFO.content !== undefined && COMPANY_INFO.content.team !== undefined);
     const IS_ADV_ISSET = (COMPANY_INFO.content !== undefined && COMPANY_INFO.content.advantages !== undefined);
+    const IS_STAGES_ISSET = (COMPANY_INFO.content !== undefined && COMPANY_INFO.content.stages !== undefined);
     const TEAM = IS_TEAM_ISSET ? COMPANY_INFO.content.team : false;
     const ADV = IS_ADV_ISSET ? COMPANY_INFO.content.advantages : false;
+    const STAGES = IS_STAGES_ISSET ? COMPANY_INFO.content.stages : false;
 
     return (
         <>
             <About/>
             <Team data={TEAM}/>
             <Advantages data={ADV}/>
-            <Stages/>
+            <Stages data={STAGES}/>
             <Feedback/>
         </>
     )

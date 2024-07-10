@@ -1,8 +1,9 @@
 'use client';
-import {useContext, useEffect, useRef, useState} from "react";
-import ClientContext from "@/lib/context/ClientContext";
 
-export default function ContentVisibility({children}) {
+import ClientContext from "@/lib/context/ClientContext";
+import {useState, useEffect, useRef, useContext} from "react";
+
+export default function ContentVisible({children}) {
     const [isVisible, setVisible] = useState(false);
     const [refOffset, setRefOffset] = useState(false);
     const ref = useRef(null);
@@ -29,7 +30,7 @@ export default function ContentVisibility({children}) {
     }, [ref]);
 
     return (
-        <div ref={ref} className={"advantages__content " + (isVisible ? "advantages__content_visible" : "")}>
+        <div ref={ref} className={"visible-content " + (isVisible ? "visible-content_visible" : "")}>
             {children}
         </div>
     )
