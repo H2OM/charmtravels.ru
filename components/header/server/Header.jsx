@@ -55,7 +55,8 @@ export default function Header() {
                                             <Link href={"/services#cruises"} className={"static__link"}>Круизы</Link>
                                         </li>
                                         <li className={"header__nav__open__menu__list__item"}>
-                                            <Link href={"/services#tickets"} className={"static__link"}>Авиабилеты</Link>
+                                            <Link href={"/services#tickets"}
+                                                  className={"static__link"}>Авиабилеты</Link>
                                         </li>
                                         <li className={"header__nav__open__menu__list__item"}>
                                             <Link href={"/services#vises"} className={"static__link"}>Визы</Link>
@@ -74,11 +75,16 @@ export default function Header() {
 
                                         </li>
                                         <li className={"header__nav__open__menu__list__item"}>
-                                            <Link href={"/company#advantages"} className={"static__link"}>Наши преимущества</Link>
-                                        </li>
-                                        <li className={"header__nav__open__menu__list__item"}>
                                             <Link href={"/company#stages"} className={"static__link"}>Этапы нашей
                                                 работы</Link>
+                                        </li>
+                                        <li className={"header__nav__open__menu__list__item"}>
+                                            <Link href={"/company#advantages"} className={"static__link"}>Наши
+                                                преимущества</Link>
+                                        </li>
+                                        <li className={"header__nav__open__menu__list__item"}>
+                                            <Link href={"/company#pick"} className={"static__link"}>Почему нас
+                                                выбирают</Link>
                                         </li>
                                         <li className={"header__nav__open__menu__list__item"}>
                                             <Link href={"/company#feedback"} className={"static__link"}>Отзывы</Link>
@@ -91,7 +97,7 @@ export default function Header() {
                         <div className="header__nav__wrap__buttons">
                             <Link href={"https://forms.gle/B3nf1tf7T4zQjgUcA"}
                                   className={"static__link_btn static__link"}>
-                                  Подбор тура
+                                Подбор тура
                             </Link>
                             <Link href={WA} className={"static__link_svg"}>
                                 <svg width="29" height="28" viewBox="0 0 29 28" fill="none"

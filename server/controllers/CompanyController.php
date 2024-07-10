@@ -14,6 +14,7 @@ class CompanyController extends Runner
         $response = ["content" => [
             "team" => $this->get_team(),
             "advantages" => $this->get_advantages(),
+            "pick"=>$this->get_pick_us(),
             "stages"=>$this->get_stages(),
             "feedback"=>$this->get_feedback()
         ]];
@@ -126,6 +127,59 @@ class CompanyController extends Runner
 
                 "title" => "Отзыв",
                 "text" => "После поездки просим вас написать отзыв о поездке, отеле и работе менеджера. Конечно, лучше всего с фото и видео с отдыха."
+            ]
+        ];
+    }
+
+    /**
+     * Action блока 'почему нас выбирают'
+     *
+     * @return void
+     */
+    protected function getPickUs(): void
+    {
+        exit(json_encode(["content" => $this->get_pick_us()]));
+    }
+
+    /**
+     * Получение блока 'почему нас выбирают'
+     *
+     * @return array
+     */
+    function get_pick_us(): array
+    {
+        return [
+            "content"=>[
+                [
+                    "title" => "Надежность",
+                    "text" => "Мы работаем только с проверенными туроператорами."
+                ],
+                [
+                    "title" => "Комфорт",
+                    "text" => "За вами закрепляется персональный менеджер, который будет на связи ДО, ВО ВРЕМЯ и ПОСЛЕ вашего отдыха."
+                ],
+                [
+                    "title" => "Забота",
+                    "text" => "Предлагаем только проверенные варианты, в которых были лично или отправляли туристов."
+                ]
+            ],
+            "images"=>[
+                "/company/pick/d54ae124-e5c9-459e-ab21-c5c687140c17.jpg",
+                "/company/pick/886bc3b8-e0bc-4ee4-8645-dcd3d79f93cc.jpg",
+                "/company/pick/3dc3ad84-f732-403d-9752-f1ce7bd8b4d1.jpg",
+                "/company/pick/293c1ab6-3aa4-4634-9124-451388217ddf.jpg",
+                "/company/pick/01392893-e527-4886-97a1-74a02e427323.jpg",
+                "/company/pick/3d91d25e-ca4d-42af-977a-63959fbd7855.jpg",
+                "/company/pick/11d46822-eef5-4a0e-bec1-40f12c1327f6.jpg",
+                "/company/pick/3dc1bd9f-493a-46d9-86c3-6fada7197b0f.jpg",
+                "/company/pick/d54ae124-e5c9-459e-ab21-c5c687140c17.jpg",
+                "/company/pick/886bc3b8-e0bc-4ee4-8645-dcd3d79f93cc.jpg",
+                "/company/pick/3dc3ad84-f732-403d-9752-f1ce7bd8b4d1.jpg",
+                "/company/pick/293c1ab6-3aa4-4634-9124-451388217ddf.jpg",
+                "/company/pick/01392893-e527-4886-97a1-74a02e427323.jpg",
+                "/company/pick/3d91d25e-ca4d-42af-977a-63959fbd7855.jpg",
+                "/company/pick/11d46822-eef5-4a0e-bec1-40f12c1327f6.jpg",
+                "/company/pick/3dc1bd9f-493a-46d9-86c3-6fada7197b0f.jpg",
             ]
         ];
     }

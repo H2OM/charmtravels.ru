@@ -1,0 +1,72 @@
+.pick {
+    .visible-content {
+        &_visible {
+            .pick__block__wrap {
+                transform: translateY(0%);
+            }
+            .pick__images {
+                opacity: 1;
+            }
+        }
+    }
+    &__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-row-gap: 112px;
+    }
+    &__block {
+        text-align: center;
+        overflow-y: hidden;
+        &__wrap {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 12px;
+            transform: translateY(150%);
+            transition: 0.6s all;
+            &__svg {
+                align-self: center;
+            }
+            .static__subtitle {
+                color: $five;
+            }
+        }
+    }
+    &__images {
+        overflow-x: hidden;
+        margin-top: 100px;
+        transition: 0.4s 0.6s all;
+        opacity: 0;
+        &__window {
+            display: grid;
+            grid-template-columns: repeat(5, calc(100% / 5 - 10px));
+            grid-auto-flow: column;
+            grid-auto-columns: calc(100% / 5 - 10px);
+            column-gap: 10px;
+            transition: 0.6s all;
+        }
+        &__image {
+            height: 350px;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        &__pagination {
+            margin-top: 54px;
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            &__dot {
+                width: 15px;
+                height: 15px;
+                border-radius: 3px;
+                border: 1px solid $five;
+                transition: 0.2s all;
+                cursor: pointer;
+                &.active {
+                    background-color: $five;
+                }
+            }
+        }
+    }
+}
