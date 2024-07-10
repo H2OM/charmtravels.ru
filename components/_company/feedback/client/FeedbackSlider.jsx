@@ -1,13 +1,13 @@
 'use client';
 
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 export default function FeedbackSlider({length, children}) {
     const [currentSlide, setCurrentSlide] = useState(0);
+    const [currentCount, setCurrentCount] = useState(1);
 
     const incSlider = () => {
-
-        let equal = Math.ceil(length / 3);
+        let equal = Math.ceil(length / currentCount);
 
         if (currentSlide + 1 < equal) {
             setCurrentSlide(prev => prev + 1);
@@ -19,6 +19,12 @@ export default function FeedbackSlider({length, children}) {
         }
     }
 
+    useEffect(() => {
+
+        setCurrentCount(3);
+
+    }, []);
+
     return (
         <div className="feedback__slider">
             <div className="feedback__slider__wrap">
@@ -29,6 +35,17 @@ export default function FeedbackSlider({length, children}) {
             </div>
             <button className={"static__nav__left"} onClick={decSlider}></button>
             <button className={"static__nav__right"} onClick={incSlider}></button>
+            <div className={"feedback__slider__pagination"}>
+                {
+                    Array.from({length: Math.ceil(length / currentCount)}).map((each, i) => {
+                        return (
+                            <div key={i}
+                                 className={"feedback__slider__pagination__dot " + (currentSlide === i ? "active" : "")}
+                                 onClick={()=>setCurrentSlide(i)}></div>
+                        )
+                    })
+                }
+            </div>
         </div>
     )
 }

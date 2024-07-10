@@ -31,7 +31,23 @@
                 box-shadow: 10px 10px 0px 0px $six;
             }
         }
-
+        &__pagination {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            &__dot {
+                width: 15px;
+                height: 15px;
+                border-radius: 3px;
+                border: 1px solid $five;
+                transition: 0.2s all;
+                cursor: pointer;
+                &.active {
+                    background-color: $five;
+                }
+            }
+        }
         .static__nav__left, .static__nav__right {
             position: absolute;
             top: 50%;

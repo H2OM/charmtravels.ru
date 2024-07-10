@@ -16,7 +16,7 @@ export default function Feedback({data}) {
                     {
                         data.map((each, i) => {
                             return (
-                                <div className={"feedback__slider__block"} key={i + data.title}>
+                                <div className={"feedback__slider__block"} key={i + each.title}>
                                     <Image
                                         src={each.image}
                                         className={"feedback__slider__block__image"}
