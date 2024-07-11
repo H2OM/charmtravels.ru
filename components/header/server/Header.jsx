@@ -4,9 +4,9 @@ import Image from "next/image";
 import "../header.scss";
 import Navigation from "@/components/header/client/Navigation";
 import HeaderMover from "@/components/header/client/HeaderMover";
-import {ADDRESS, NUMBER, WA} from "@/lib/info/Info";
 
 export default function Header() {
+
     return (
         <header className={"header"}>
             <div className="container">
@@ -24,8 +24,8 @@ export default function Header() {
                         />
                     </Link>
                     <div className="static__info">
-                        <Link href={"tel:+79182170638"}>{NUMBER}</Link>
-                        <h1>{ADDRESS}</h1>
+                        <Link href={"tel:+79182170638"}>{process.env.phone}</Link>
+                        <h1>{process.env.address}</h1>
                     </div>
                 </div>
                 <HeaderMover>
@@ -95,11 +95,11 @@ export default function Header() {
                         </Navigation>
 
                         <div className="header__nav__wrap__buttons">
-                            <Link href={"https://forms.gle/B3nf1tf7T4zQjgUcA"}
+                            <Link href={process.env.anketa}
                                   className={"static__link_btn static__link"}>
                                 Подбор тура
                             </Link>
-                            <Link href={WA} className={"static__link_svg"}>
+                            <Link href={process.env.WA} className={"static__link_svg"}>
                                 <svg width="29" height="28" viewBox="0 0 29 28" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <rect className="tgo-color" x="0.258667" width="28" height="28" rx="14"

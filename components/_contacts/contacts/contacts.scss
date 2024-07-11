@@ -1,3 +1,101 @@
 .contacts {
+    &__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-flow: row;
+        grid-auto-columns: 1fr;
+        row-gap: 30px;
+        column-gap: 12px;
+        overflow: hidden;
+        &__block {
+            justify-self: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            text-align: center;
+            transform: translateY(-100%);
+            animation: manifest-top-bottom 0.6s forwards;
+            &_more {
+                transform: translateY(100%);
+                grid-column: 1/4;
+                animation: manifest-bottom-top 0.6s 0.6s forwards;
+            }
+            &__big {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 15px;
+                gap: 15px;
+            }
+            .static__link {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: 0.2s all;
+                gap: 0px;
+                font-size: 20px;
+                font-weight: 400;
 
+                &:hover {
+                    gap: 10px;
+                }
+
+                &:before, &:after {
+                    content: "";
+                    width: 18px;
+                    height: 12px;
+                    display: inline-block;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+
+                &:before {
+                    background-image: url('./../../../public/svg/link-splitter_green_left.svg');
+                }
+
+                &:after {
+                    background-image: url('./../../../public/svg/link-splitter_green_right.svg');
+                }
+            }
+
+            .static__subtitle {
+                color: $five;
+            }
+
+            .static__content {
+                span {
+                    display: block;
+                    font-weight: 400;
+                    color: $gray;
+                    font-size: 18px;
+                    margin-bottom: -8px;
+                }
+            }
+
+            &__socs {
+                display: flex;
+                gap: 20px;
+            }
+        }
+    }
+    &__desc {
+        margin-top: 110px;
+    }
+}
+@keyframes manifest-bottom-top {
+    from {
+        transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
+@keyframes manifest-top-bottom {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0%);
+    }
 }

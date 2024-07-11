@@ -13,8 +13,10 @@
             color: $three;
         }
         &_svg {
+            display: block;
             height: 28px;
             transition: 0.8s all;
+            width: fit-content;
             &:hover {
                 transform: rotate(360deg);
             }
@@ -70,6 +72,9 @@
         color: $zero;
         span {
             font-weight: 600;
+        }
+        a {
+            color: $zero;
         }
     }
     &__nav {

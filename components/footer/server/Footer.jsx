@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import {ADDRESS, MAIL, NUMBER} from "@/lib/info/Info";
 import '../footer.scss';
 import SubsForm from "@/components/footer/client/SubsForm";
 
@@ -36,9 +35,9 @@ export default function Footer() {
                                 />
                             </Link>
                             <div className="static__info">
-                                <Link href={"tel:+79182170638"}>{NUMBER}</Link>
-                                <Link href={"mail:charmtravel.krd@gmail.com"}>{MAIL}</Link>
-                                <span>{ADDRESS}</span>
+                                <Link href={"tel:+79182170638"}>{process.env.phone}</Link>
+                                <Link href={"mail:charmtravel.krd@gmail.com"}>{process.env.mail}</Link>
+                                <span>{process.env.address}</span>
                             </div>
                         </div>
                         <div className="footer__content__main__block">
@@ -69,7 +68,7 @@ export default function Footer() {
                                 </div>
                             </div>
                             <div className="footer__content__main__block__section">
-                                <Link href={"https://forms.gle/B3nf1tf7T4zQjgUcA"} target={"_blank"}
+                                <Link href={process.env.anketa} target={"_blank"}
                                       className={"static__link static__link_btn footer__content__main__block__section__title"}>
                                     Подбор тура
                                 </Link>
