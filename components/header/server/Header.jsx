@@ -24,7 +24,7 @@ export default function Header() {
                         />
                     </Link>
                     <div className="static__info">
-                        <Link href={"tel:+79182170638"}>{process.env.phone}</Link>
+                        <Link href={`tel:${process.env.phone}`}>{process.env.phone}</Link>
                         <h1>{process.env.address}</h1>
                     </div>
                 </div>
@@ -88,6 +88,9 @@ export default function Header() {
                                         </li>
                                         <li className={"header__nav__open__menu__list__item"}>
                                             <Link href={"/company#feedback"} className={"static__link"}>Отзывы</Link>
+                                        </li>
+                                        <li className={"header__nav__open__menu__list__item"}>
+                                            <Link href={"/company#requisites"} className={"static__link"}>Реквизиты</Link>
                                         </li>
                                     </ul>
                                 </Openmenu>

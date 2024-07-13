@@ -64,6 +64,7 @@ export default function Footer() {
                                     <Link href={"/company#advantages"} className={"static__link"}>Наши преимущества</Link>
                                     <Link href={"/company#pick"} className={"static__link"}>Почему нас выбирают</Link>
                                     <Link href={"/company#feedback"} className={"static__link"}>Отзывы</Link>
+                                    <Link href={"/company#requisetes"} className={"static__link"}>Реквизиты</Link>
                                     <Link href={"/contacts"} className={"static__link"}>Контакты</Link>
                                 </div>
                             </div>
