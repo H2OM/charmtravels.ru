@@ -7,7 +7,7 @@
 .yarn/install-state.gz
 
 .gitignore
-./Nginx_1.23_vhost.conf
+/Nginx_1.23_vhost.conf
 
 # testing
 /coverage
