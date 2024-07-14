@@ -49,24 +49,26 @@ export default function Header() {
                                 <Openmenu title={"Услуги"}>
                                     <ul className={"header__nav__open__menu__list"}>
                                         <li className={"header__nav__open__menu__list__item"}>
+                                            <Link href={"/services#prices"} className={"static__link"}>Цены</Link>
+                                        </li>
+                                        <li className={"header__nav__open__menu__list__item"}>
                                             <Link href={"/services#tours"} className={"static__link"}>Туры</Link>
+                                        </li>
+                                        <li className={"header__nav__open__menu__list__item"}>
+                                            <Link href={"/services#hotels"} className={"static__link"}>Отели</Link>
                                         </li>
                                         <li className={"header__nav__open__menu__list__item"}>
                                             <Link href={"/services#cruises"} className={"static__link"}>Круизы</Link>
                                         </li>
                                         <li className={"header__nav__open__menu__list__item"}>
-                                            <Link href={"/services#tickets"}
-                                                  className={"static__link"}>Авиабилеты</Link>
-                                        </li>
-                                        <li className={"header__nav__open__menu__list__item"}>
-                                            <Link href={"/services#vises"} className={"static__link"}>Визы</Link>
+                                            <Link href={"/services#excursions"} className={"static__link"}>Экскурсии</Link>
                                         </li>
                                     </ul>
                                 </Openmenu>
                             </div>
                             <div className={"static__link hl_after"}>
                                 <Openmenu title={"О компании"}>
-                                    <ul className={"header__nav__open__menu__list"}>
+                                <ul className={"header__nav__open__menu__list"}>
                                         <li className={"header__nav__open__menu__list__item"}>
                                             <Link href={"/company#about"} className={"static__link"}>О нас</Link>
                                         </li>

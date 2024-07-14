@@ -46,11 +46,11 @@ export default function Footer() {
                                     Услуги
                                 </div>
                                 <div className="footer__content__main__block__section__items">
+                                    <Link href={"/services#prices"} className={"static__link"}>Цены</Link>
                                     <Link href={"/services#tours"} className={"static__link"}>Туры</Link>
+                                    <Link href={"/services#hotels"} className={"static__link"}>Отели</Link>
                                     <Link href={"/services#cruises"} className={"static__link"}>Круизы</Link>
-                                    <Link href={"/services#tickets"} className={"static__link"}>Авиабилеты</Link>
-                                    <Link href={"/services#vises"} className={"static__link"}>Визы</Link>
-                                    <Link href={"/faq"} className={"static__link"}>Часто задаваемые вопросы</Link>
+                                    <Link href={"/services#excursions"} className={"static__link"}>Экскурсии</Link>
                                 </div>
                             </div>
                             <div className="footer__content__main__block__section">
@@ -61,7 +61,8 @@ export default function Footer() {
                                     <Link href={"/company#about"} className={"static__link"}>О нас</Link>
                                     <Link href={"/company#team"} className={"static__link"}>Наша команда</Link>
                                     <Link href={"/company#stages"} className={"static__link"}>Этапы нашей работы</Link>
-                                    <Link href={"/company#advantages"} className={"static__link"}>Наши преимущества</Link>
+                                    <Link href={"/company#advantages"} className={"static__link"}>Наши
+                                        преимущества</Link>
                                     <Link href={"/company#pick"} className={"static__link"}>Почему нас выбирают</Link>
                                     <Link href={"/company#feedback"} className={"static__link"}>Отзывы</Link>
                                     <Link href={"/company#requisetes"} className={"static__link"}>Реквизиты</Link>

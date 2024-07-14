@@ -1,6 +1,5 @@
 import '../about.scss';
 import Image from "next/image";
-// TODO почему нас выбирают
 export default function About() {
     return (
         <section className={"about"} id={"about"}>
@@ -31,7 +30,6 @@ export default function About() {
                         <br/>
                         <p>Воплотим ваши самые смелые мечты.</p>
                         <br/>
-                        <p>Номер в Федеральном Реестре турагентов: <span>0036068</span></p>
                     </div>
                     <Image
                         src={"/logo/logo.png"}
