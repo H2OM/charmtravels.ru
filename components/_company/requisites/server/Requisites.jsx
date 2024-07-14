@@ -25,7 +25,7 @@ export default function Requisites() {
                             <p>Расчетный счет: <span>40802810300004963367</span></p>
                             <br/>
                         </div>
-                        <div className={"requisites__block"}style={{transition: "0.4s 0.4s all"}}>
+                        <div className={"requisites__block"} style={{transition: "0.4s 0.4s all"}}>
                             <br/>
                             <p>Банк: <span>АО "ТИНЬКОФФ БАНК"</span></p>
                             <br/>
