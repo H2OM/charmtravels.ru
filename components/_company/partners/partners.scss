@@ -1,0 +1,12 @@
+.about {
+    &__split {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        &__image {
+            width: auto;
+            height: 300px;
+            align-self: center;
+            justify-self: center;
+        }
+    }
+}

@@ -1,4 +1,20 @@
 .about {
+    .visible-content {
+        &_visible {
+            .about {
+                &__manifest {
+                    p {
+                        transform: translateY(0%);
+                    }
+                }
+                &__split {
+                    &__image {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
     &__split {
         display: grid;
         grid-template-columns: 2fr 1fr;
@@ -7,6 +23,13 @@
             height: 300px;
             align-self: center;
             justify-self: center;
+            opacity: 0;
+        }
+    }
+    &__manifest {
+        overflow: hidden;
+        p {
+            transform: translateY(100%);
         }
     }
 }

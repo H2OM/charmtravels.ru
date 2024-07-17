@@ -7,6 +7,7 @@ import GET_DATA from "@/lib/GETDATA/GET_DATA";
 import Pick from "@/components/_company/pick/server/Pick";
 import Safe from "@/components/_company/safe/server/Safe";
 import Requisites from "@/components/_company/requisites/server/Requisites";
+import Partners from "@/components/_company/partners/server/Partners";
 
 export default async function Page() {
 
@@ -23,10 +24,10 @@ export default async function Page() {
     const PICK = (IS_PICK_ISSET && COMPANY_INFO.content.pick.content !== undefined) ? COMPANY_INFO.content.pick.content : false;
     const SAFE = (IS_PICK_ISSET && COMPANY_INFO.content.pick.images !== undefined) ? COMPANY_INFO.content.pick.images : false;
 
-
     return (
         <>
             <About/>
+            <Partners/>
             <Team data={TEAM}/>
             <Stages data={STAGES}/>
             <Advantages data={ADV}/>
