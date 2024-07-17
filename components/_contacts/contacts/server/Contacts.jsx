@@ -128,7 +128,7 @@ export default function Contacts() {
                         </div>
                     </div>
                     {
-                    OTHER.length > 0 &&
+                        OTHER.length > 0 &&
                         <div className="contacts__grid__block contacts__grid__block_more">
                             <div className="static__subtitle">
                                 Еще
@@ -151,6 +151,9 @@ export default function Contacts() {
                 <div className="static__content contacts__desc">
                     * - Принадлежит запрещенной в России организации Meta
                 </div>
+                <iframe
+                    src="https://yandex.ru/map-widget/v1/?um=constructor%3A64a179e6d9e282e9aaa606bc7d07ab40c38d8d5611ab5856ae2188f14ea5efc1&amp;source=constructor"
+                    width="100%" height="504" frameBorder="0" style={{borderRadius: "16px"}}></iframe>
             </div>
         </section>
     )

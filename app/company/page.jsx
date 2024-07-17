@@ -19,6 +19,7 @@ export default async function Page() {
     const STAGES = IS_STAGES_ISSET ? COMPANY_INFO.content.stages : false;
     const FEEDBACK = IS_FEEDBACK_ISSET ? COMPANY_INFO.content.feedback : false;
     const PICK = IS_PICK_ISSET ? COMPANY_INFO.content.pick : false;
+
     return (
         <>
             <About/>

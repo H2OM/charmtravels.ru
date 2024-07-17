@@ -44,6 +44,9 @@ export default function About() {
                         priority={true}
                     />
                 </div>
+                <div className="about__bottom">
+
+                </div>
             </div>
         </section>
     )
