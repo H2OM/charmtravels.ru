@@ -13,5 +13,15 @@ export default async function SET_ENV_INFO() {
         process.env.VK = data.content.VK;
         process.env.anketa = data.content.anketa;
         process.env.other = JSON.stringify(data.content.other);
+    } else {
+        process.env.address = "";
+        process.env.INST =  "";
+        process.env.phone = "";
+        process.env.mail = "";
+        process.env.WA = "";
+        process.env.TG = "";
+        process.env.VK = "";
+        process.env.anketa = "";
+        process.env.other = undefined;
     }
 }

@@ -5,6 +5,8 @@ import Stages from "@/components/_company/stages/server/Stages";
 import Feedback from "@/components/_company/feedback/server/Feedback";
 import GET_DATA from "@/lib/GETDATA/GET_DATA";
 import Pick from "@/components/_company/pick/server/Pick";
+import Safe from "@/components/_company/safe/server/Safe";
+import Requisites from "@/components/_company/requisites/server/Requisites";
 
 export default async function Page() {
 
@@ -18,7 +20,9 @@ export default async function Page() {
     const ADV = IS_ADV_ISSET ? COMPANY_INFO.content.advantages : false;
     const STAGES = IS_STAGES_ISSET ? COMPANY_INFO.content.stages : false;
     const FEEDBACK = IS_FEEDBACK_ISSET ? COMPANY_INFO.content.feedback : false;
-    const PICK = IS_PICK_ISSET ? COMPANY_INFO.content.pick : false;
+    const PICK = (IS_PICK_ISSET && COMPANY_INFO.content.pick.content !== undefined) ? COMPANY_INFO.content.pick.content : false;
+    const SAFE = (IS_PICK_ISSET && COMPANY_INFO.content.pick.images !== undefined) ? COMPANY_INFO.content.pick.images : false;
+
 
     return (
         <>
@@ -27,7 +31,9 @@ export default async function Page() {
             <Stages data={STAGES}/>
             <Advantages data={ADV}/>
             <Pick data={PICK}/>
+            <Safe data={SAFE}/>
             <Feedback data={FEEDBACK}/>
+            <Requisites/>
         </>
     )
 }

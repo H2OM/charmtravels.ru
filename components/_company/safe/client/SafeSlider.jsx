@@ -2,7 +2,7 @@
 
 import {useEffect, useState} from "react";
 
-export default function PickSlider({length, children}) {
+export default function SafeSlider({length, children}) {
     const [currentSlide, setCurrentSlide] = useState(0);
     const [currentCount, setCurrentCount] = useState(1);
 
@@ -13,12 +13,12 @@ export default function PickSlider({length, children}) {
     }, []);
 
     return (
-        <div className={"pick__images"}>
-            <div className="pick__images__window"
+        <div className={"safe__images"}>
+            <div className="safe__images__window"
                  style={{transform: `translateX(-${100 * currentSlide}%)`}}>
                 {children}
             </div>
-            <div className="pick__images__pagination">
+            <div className="safe__images__pagination">
                 {
                     Array.from({length: Math.ceil(length / currentCount)}).map((each, i) => {
                         return (
