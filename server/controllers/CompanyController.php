@@ -2,21 +2,31 @@
 
 namespace app\controllers;
 
+use app\services\CompanyService;
+
 class CompanyController extends Runner
 {
+    /** @var CompanyService $companyService */
+    protected CompanyService $companyService;
+
+    public function __construct()
+    {
+        $this->companyService = new CompanyService();
+    }
+
     /**
      * Action все блоки 'компании'
      *
      * @return void
      */
-    protected function getCompanyInfo()
+    protected function getCompanyInfo() : void
     {
         $response = ["content" => [
-            "team" => $this->get_team(),
-            "advantages" => $this->get_advantages(),
-            "pick"=>$this->get_pick_us(),
-            "stages"=>$this->get_stages(),
-            "feedback"=>$this->get_feedback()
+            "team" => $this->companyService->get_team(),
+            "advantages" => $this->companyService->get_advantages(),
+            "pick"=>$this->companyService->get_pick_us(),
+            "stages"=>$this->companyService->get_stages(),
+            "feedback"=>$this->companyService->get_feedback()
         ]];
 
         exit(json_encode($response));
@@ -29,50 +39,7 @@ class CompanyController extends Runner
      */
     protected function getFedback(): void
     {
-        exit(json_encode(["content" => $this->get_feedback()]));
-    }
-
-    /**
-     * Получение блока 'отзывы'
-     *
-     * @return array
-     */
-    function get_feedback(): array
-    {
-        return [
-            [
-                "title"=>"Туристы вернулись с Египта и рассказали, как все прошло",
-                "image"=>"/company/feedback/09f91433-c6b8-4f94-a731-9c4db58766de.png"
-            ],
-            [
-                "title"=>"Туристы отдыхали в Турции и рассказали о своих впечатлениях",
-                "image"=>"/company/feedback/75584187-33d6-480f-9dcc-ed776c9ca887.png"
-            ],
-            [
-                "title"=>"Туристы поделились отзывом после отдыха на Мальдивах",
-                "image"=>"/company/feedback/39205206-1de2-41ca-8fd0-f580eb6b7425.png"
-            ],
-            [
-                "title"=>"Туристы вернулись с Египта и рассказали, как все прошло",
-                "image"=>"/company/feedback/09f91433-c6b8-4f94-a731-9c4db58766de.png"
-            ],
-            [
-                "title"=>"Туристы отдыхали в Турции и рассказали о своих впечатлениях",
-                "image"=>"/company/feedback/75584187-33d6-480f-9dcc-ed776c9ca887.png"
-            ],
-            [
-                "title"=>"Туристы поделились отзывом после отдыха на Мальдивах",
-                "image"=>"/company/feedback/39205206-1de2-41ca-8fd0-f580eb6b7425.png"
-            ],
-            [
-                "title"=>"Туристы отдыхали в Турции и рассказали о своих впечатлениях",
-                "image"=>"/company/feedback/75584187-33d6-480f-9dcc-ed776c9ca887.png"
-            ],
-            [
-                "title"=>"Туристы поделились отзывом после отдыха на Мальдивах",
-                "image"=>"/company/feedback/39205206-1de2-41ca-8fd0-f580eb6b7425.png"
-            ]
-        ];
+        exit(json_encode(["content" => $this->companyService->get_feedback()]));
     }
 
     /**
@@ -82,53 +49,7 @@ class CompanyController extends Runner
      */
     protected function getStages(): void
     {
-        exit(json_encode(["content" => $this->get_stages()]));
-    }
-
-    /**
-     * Получение блока 'этапы работы'
-     *
-     * @return array
-     */
-    function get_stages(): array
-    {
-        return [
-            [
-
-                "title" => "Консультация",
-                "text" => "Определяемся со страной, курортом. Менеджер узнает ваши пожелания по отдыху."
-            ],
-            [
-
-                "title" => "Подбор вариантов",
-                "text" => "Исходя из ваших пожеланий, менеджер подбирает 3-5 вариантов и скидывает на What`sApp. <br> Обговаривается время следующего общения."
-            ],
-            [
-
-                "title" => "Обсуждение вариантов",
-                "text" => "Менеджер отвечает на интересующие вопросы по отелям, курортам. <br> Если варианты не подошли - находим еще предложения."
-            ],
-            [
-
-                "title" => "Бронирование",
-                "text" => "Скидываете паспорта, предоплату или полную оплату (в зависимости от дат тура). <br> Подписывается договор о реализации туристского продукта. Менеджер бронирует тур."
-            ],
-            [
-
-                "title" => "Консультация до вылета",
-                "text" => "Выдача полетных документов / ваучера. Менеджер отвечает на ваши вопросы. Рассказывает фишки для более комфортного отдыха."
-            ],
-            [
-
-                "title" => "В поездке",
-                "text" => "Если возникают вопросы на отдыхе - решаем. Спрашиваем о ваших впечатлениях. <br> Просим отмечать нас в соцсетях. <br> Замечательно, если вы сможете прям из поездки заснять видео-отзыв для нас."
-            ],
-            [
-
-                "title" => "Отзыв",
-                "text" => "После поездки просим вас написать отзыв о поездке, отеле и работе менеджера. Конечно, лучше всего с фото и видео с отдыха."
-            ]
-        ];
+        exit(json_encode(["content" => $this->companyService->get_stages()]));
     }
 
     /**
@@ -138,50 +59,7 @@ class CompanyController extends Runner
      */
     protected function getPickUs(): void
     {
-        exit(json_encode(["content" => $this->get_pick_us()]));
-    }
-
-    /**
-     * Получение блока 'почему нас выбирают'
-     *
-     * @return array
-     */
-    function get_pick_us(): array
-    {
-        return [
-            "content"=>[
-                [
-                    "title" => "Надежность",
-                    "text" => "Мы работаем только с проверенными туроператорами."
-                ],
-                [
-                    "title" => "Комфорт",
-                    "text" => "За вами закрепляется персональный менеджер, который будет на связи ДО, ВО ВРЕМЯ и ПОСЛЕ вашего отдыха."
-                ],
-                [
-                    "title" => "Забота",
-                    "text" => "Предлагаем только проверенные варианты, в которых были лично или отправляли туристов."
-                ]
-            ],
-            "images"=>[
-                "/company/pick/d54ae124-e5c9-459e-ab21-c5c687140c17.jpg",
-                "/company/pick/886bc3b8-e0bc-4ee4-8645-dcd3d79f93cc.jpg",
-                "/company/pick/3dc3ad84-f732-403d-9752-f1ce7bd8b4d1.jpg",
-                "/company/pick/293c1ab6-3aa4-4634-9124-451388217ddf.jpg",
-                "/company/pick/01392893-e527-4886-97a1-74a02e427323.jpg",
-                "/company/pick/3d91d25e-ca4d-42af-977a-63959fbd7855.jpg",
-                "/company/pick/11d46822-eef5-4a0e-bec1-40f12c1327f6.jpg",
-                "/company/pick/3dc1bd9f-493a-46d9-86c3-6fada7197b0f.jpg",
-                "/company/pick/d54ae124-e5c9-459e-ab21-c5c687140c17.jpg",
-                "/company/pick/886bc3b8-e0bc-4ee4-8645-dcd3d79f93cc.jpg",
-                "/company/pick/3dc3ad84-f732-403d-9752-f1ce7bd8b4d1.jpg",
-                "/company/pick/293c1ab6-3aa4-4634-9124-451388217ddf.jpg",
-                "/company/pick/01392893-e527-4886-97a1-74a02e427323.jpg",
-                "/company/pick/3d91d25e-ca4d-42af-977a-63959fbd7855.jpg",
-                "/company/pick/11d46822-eef5-4a0e-bec1-40f12c1327f6.jpg",
-                "/company/pick/3dc1bd9f-493a-46d9-86c3-6fada7197b0f.jpg",
-            ]
-        ];
+        exit(json_encode(["content" => $this->companyService->get_pick_us()]));
     }
 
     /**
@@ -191,31 +69,7 @@ class CompanyController extends Runner
      */
     protected function getAdvantages(): void
     {
-        exit(json_encode(["content" => $this->get_advantages()]));
-    }
-
-    /**
-     * Получение блока 'преимущества'
-     *
-     * @return array
-     */
-    function get_advantages(): array
-    {
-        return [
-            [
-                "title" => "Можете купить у нас тур из любой точки РФ",
-                "text" => "Вне зависимости от вашего месторасположения, вы можете приобрести тур онлайн."
-            ],
-            [
-                "title" => "Не надо тратить время на дорогу в офис",
-                "text" => "Не нужно тратить свой выходной или вечер после работы на то, чтобы приехать в офис. Всё может быть полностью дистанционно."
-            ],
-            [
-                "title" => "Мыслим шире",
-                "text" => "Не боимся браться за организацию сложных маршрутов под ваши индивидуальные потребности.<br>
-                           Даже в Египте можем составить необычный маршрут. Например, мало кто знал, что там есть филиал Мальдив на средиземноморском побережье. Об этом расскажем на консультации."
-            ],
-        ];
+        exit(json_encode(["content" => $this->companyService->get_advantages()]));
     }
 
     /**
@@ -225,147 +79,6 @@ class CompanyController extends Runner
      */
     protected function getTeam(): void
     {
-        exit(json_encode(["content" => $this->get_team()]));
-    }
-
-    /**
-     * Запрос на получение блока 'команда'
-     *
-     * @return array
-     * */
-    function get_team(): array
-    {
-        return [
-            [
-                "name" => "Стародубцева Софья",
-                "titles" => ["Директор CHARM TRAVEL"],
-                "description" => "Всегда находит для вас уникальные места, о которых мало кто знает. Очень любит необычные направления.<br>Искренне влюбленная в путешествия. Считает, мир открыт каждому и только опытный турагент, влюбленный в свое дело поможет это осуществить.",
-                "image" => "/company/team/sofia_s.png",
-                "number" => "+ 7 (999) 111-22-33",
-                "mail" => "testl@test.test",
-                "wa" => "test",
-                "tg" => ""
-            ],
-            [
-                "name" => "Выдай Виктория",
-                "titles" => ["Менеджер", "В туризме с 2012 года."],
-                "description" => "Знает как совместить качественный отдых и выгодную цену.",
-                "image" => "/company/team/vikt_v.png",
-                "number" => "",
-                "mail" => "test@test.test",
-                "wa" => "",
-                "tg" => "test"
-            ],
-            [
-                "name" => "Калиниченко Екатерина",
-                "titles" => ["Менеджер", "В туризме более 4 лет."],
-                "description" => "Путешествует сама и делится знаниями с туристами.",
-                "image" => "/company/team/ekat_k.png",
-                "number" => "+ 7 (999) 111-22-33",
-                "mail" => "testl@test.test",
-                "wa" => "test",
-                "tg" => "test"
-            ],
-            [
-                "name" => "Пиголкина Наталья",
-                "titles" => ["Менеджер"],
-                "description" => "Заботится о том, чтобы учесть все ваши пожелания и найдет лучшее, что есть в вашем бюджете.",
-                "image" => "/company/team/natal_p.png",
-                "number" => "",
-                "mail" => "",
-                "wa" => "test",
-                "tg" => "test"
-            ],
-            [
-                "name" => "Пузыревская Анна",
-                "titles" => ["Менеджер", "10 лет в туризме"],
-                "description" => "Знает все тонкости организации отдыха с комфортом в любой уголок мира.",
-                "image" => "/company/team/anna_p.png",
-                "number" => "",
-                "mail" => "",
-                "wa" => "",
-                "tg" => ""
-            ],
-            [
-                "name" => "Стародубцева Софья",
-                "titles" => ["Директор CHARM TRAVEL"],
-                "description" => "Всегда находит для вас уникальные места, о которых мало кто знает. Очень любит необычные направления.<br>Искренне влюбленная в путешествия. Считает, мир открыт каждому и только опытный турагент, влюбленный в свое дело поможет это осуществить.",
-                "image" => "/company/team/sofia_s.png",
-                "number" => "",
-                "mail" => "",
-                "wa" => "",
-                "tg" => "test"
-            ],
-            [
-                "name" => "Выдай Виктория",
-                "titles" => ["Менеджер", "В туризме с 2012 года."],
-                "description" => "Знает как совместить качественный отдых и выгодную цену.",
-                "image" => "/company/team/vikt_v.png",
-                "number" => "+ 7 (999) 111-22-33",
-                "mail" => "testl@test.test",
-                "wa" => "",
-                "tg" => ""
-            ],
-            [
-                "name" => "Калиниченко Екатерина",
-                "titles" => ["Менеджер", "В туризме более 4 лет."],
-                "description" => "Путешествует сама и делится знаниями с туристами.",
-                "image" => "/company/team/ekat_k.png",
-                "number" => "",
-                "mail" => "",
-                "wa" => "",
-                "tg" => "31"
-            ],
-            [
-                "name" => "Пиголкина Наталья",
-                "titles" => ["Менеджер"],
-                "description" => "Заботится о том, чтобы учесть все ваши пожелания и найдет лучшее, что есть в вашем бюджете.",
-                "image" => "/company/team/natal_p.png",
-                "number" => "",
-                "mail" => "",
-                "wa" => "31",
-                "tg" => ""
-            ],
-            [
-                "name" => "Пузыревская Анна",
-                "titles" => ["Менеджер", "10 лет в туризме"],
-                "description" => "Знает все тонкости организации отдыха с комфортом в любой уголок мира.",
-                "image" => "/company/team/anna_p.png",
-                "number" => "",
-                "mail" => "testl@test.test",
-                "wa" => "",
-                "tg" => ""
-            ],
-            [
-                "name" => "Стародубцева Софья",
-                "titles" => ["Директор CHARM TRAVEL"],
-                "description" => "Всегда находит для вас уникальные места, о которых мало кто знает. Очень любит необычные направления.<br>Искренне влюбленная в путешествия. Считает, мир открыт каждому и только опытный турагент, влюбленный в свое дело поможет это осуществить.",
-                "image" => "/company/team/sofia_s.png",
-                "number" => "+ 7 (999) 111-22-33",
-                "mail" => "testl@test.test",
-                "wa" => "test",
-                "tg" => "test"
-            ],
-            [
-                "name" => "Выдай Виктория",
-                "titles" => ["Менеджер", "В туризме с 2012 года."],
-                "description" => "Знает как совместить качественный отдых и выгодную цену.",
-                "image" => "/company/team/vikt_v.png",
-                "number" => "+ 7 (999) 111-22-33",
-                "mail" => "",
-                "wa" => "test",
-                "tg" => ""
-            ],
-            [
-                "name" => "Калиниченко Екатерина",
-                "titles" => ["Менеджер", "В туризме более 4 лет."],
-                "description" => "Путешествует сама и делится знаниями с туристами.",
-                "image" => "/company/team/ekat_k.png",
-                "number" => "+ 7 (999) 111-22-33",
-                "mail" => "",
-                "wa" => "",
-                "tg" => ""
-            ]
-        ];
+        exit(json_encode(["content" => $this->companyService->get_team()]));
     }
 }

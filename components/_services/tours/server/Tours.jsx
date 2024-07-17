@@ -1,6 +1,6 @@
 import '../tours.scss';
 
-export default function Tours() {
+export default function Tours({data}) {
     return (
         <section className={"tours"} id={"tours"}>
             <div className="container">
