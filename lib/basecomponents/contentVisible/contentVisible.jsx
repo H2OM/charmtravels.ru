@@ -10,11 +10,16 @@ export default function ContentVisible({children}) {
     const {scroll} = useContext(ClientContext);
 
     useEffect(() => {
-        console.log(refOffset);
         if (!isVisible && refOffset && scroll >= (refOffset - (window.innerHeight / 1.5))) {
             setVisible(true);
         }
     }, [scroll]);
+
+    useEffect(() => {
+        if (!isVisible && refOffset && scroll >= (refOffset - (window.innerHeight / 1.5))) {
+            setVisible(true);
+        }
+    }, [refOffset]);
 
     useEffect(() => {
 
@@ -26,13 +31,7 @@ export default function ContentVisible({children}) {
             element = element.offsetParent;
         }
 
-        console.log(offset);
-
         setRefOffset(offset);
-
-        if (!isVisible && offset && scroll >= (offset - (window.innerHeight / 1.5))) {
-            setVisible(true);
-        }
 
     }, [ref]);
 

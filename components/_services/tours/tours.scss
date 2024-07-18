@@ -1,0 +1,57 @@
+.tours {
+    .visible-content {
+        &_visible {
+            .tours__content__block {
+                opacity: 1;
+            }
+        }
+    }
+    &__first {
+        margin-top: 0;
+    }
+    .static__subtitle2 {
+        color: $five;
+        margin-bottom: 60px;
+        margin-top: 60px;
+    }
+    &__content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        &__block {
+            box-shadow: 0px 1px 23px rgba(0, 0, 0, 0.05),
+            0px 15px 30px rgba(20, 59, 121, 0.03);
+            border-radius: 10px;
+            padding: 20px 20px 20px 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            opacity: 0;
+            &__split {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+            }
+            &__under {
+                display: flex;
+                justify-content: space-between;
+                gap: 30px;
+            }
+            &__image {
+                width: 100%;
+                height: 270px;
+                object-fit: cover;
+                border-radius: 10px;
+            }
+            &__text {
+                font-size: 18px;
+                line-height: 28px;
+                margin-top: 14px;
+            }
+            .static__link_btn {
+                font-size: 14px;
+                padding: 0 20px;
+            }
+        }
+    }
+}
