@@ -14,9 +14,9 @@
             $db = require_once CONF . 'config_db.php';       
             try {
                 self::$pdo = new PDO($db['dsn'], $db['user'], $db['pass'], $db['opts']);
-                
+
             } catch (\PDOException $e) {
-                throw new \PDOException("Error with data base connection", 500);
+                throw new \PDOException($e, 500);
             }
         }
         public static function getQuery($request, $FKAAN = false, $COUNT = false, $ARRAY_ONLY = false) {

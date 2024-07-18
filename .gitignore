@@ -13,6 +13,7 @@
 /coverage
 /server/lib/vendor
 /server/lib/composer.lock
+/server/settings/db_acc.php
 # next.js
 /.next/
 /out/
