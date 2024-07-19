@@ -6,7 +6,7 @@ export default function Contacts() {
 
     const OTHER = (process.env.other !== undefined ? JSON.parse(process.env.other).map((each, i) => {
         return (
-            <Link href={each.link} className={"static__link"} key={each.title + i}>{each.title}</Link>
+            <Link href={each.link} target={"_blank"} className={"static__link"} key={each.title + i}>{each.title}</Link>
         )
     }) : false);
 
@@ -50,10 +50,10 @@ export default function Contacts() {
                         <div className="static__content">
                             <span>Телефон:</span>
                             <Link href={`tel:${process.env.phone}`}
-                                  className={"static__link"}>{process.env.phone}</Link>
+                                  className={"static__link"} target={"_blank"}>{process.env.phone}</Link>
                             <span>Электронна почта:</span>
                             <Link href={`mailto: ${process.env.mail}`}
-                                  className={"static__link"}>{process.env.mail}</Link>
+                                  className={"static__link"} target={"_blank"}>{process.env.mail}</Link>
                         </div>
                     </div>
                     <div className="contacts__grid__block" style={{animationDelay: "0.4s"}}>
@@ -70,7 +70,7 @@ export default function Contacts() {
                             priority={true}
                         />
                         <div className="contacts__grid__block__socs">
-                            <Link href={process.env.WA} className={"static__link_svg"}>
+                            <Link href={process.env.WA} className={"static__link_svg"} target={"_blank"}>
                                 <Image
                                     src={"/svg/WA.svg"}
                                     alt={"TG"}
@@ -80,7 +80,7 @@ export default function Contacts() {
                                     priority={true}
                                 />
                             </Link>
-                            <Link href={process.env.TG} className={"static__link_svg"}>
+                            <Link href={process.env.TG} className={"static__link_svg"} target={"_blank"}>
                                 <Image
                                     src={"/svg/TG.svg"}
                                     alt={"TG"}
@@ -90,7 +90,7 @@ export default function Contacts() {
                                     priority={true}
                                 />
                             </Link>
-                            <Link href={process.env.VK} className={"static__link_svg"}>
+                            <Link href={process.env.VK} className={"static__link_svg"} target={"_blank"}>
                                 <Image
                                     src={"/svg/VK.svg"}
                                     alt={"VK"}
@@ -100,7 +100,7 @@ export default function Contacts() {
                                     priority={true}
                                 />
                             </Link>
-                            <Link href={process.env.INST} className={"static__link_svg"}>
+                            <Link href={process.env.INST} className={"static__link_svg"} target={"_blank"}>
                                 <Image
                                     src={"/svg/INST.svg"}
                                     alt={"INST"}
