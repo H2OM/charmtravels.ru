@@ -1,7 +1,64 @@
 .cruises {
     .visible-content {
         &_visible {
+            .cruises__content {
+                box-shadow: 0px 1px 23px rgba(0, 0, 0, 0.05),
+                0px 15px 30px rgba(20, 59, 121, 0.03);
+                .static__subtitle,
+                &__svg,
+                &__text,
+                &__bottom,
+                &__image {
+                    opacity: 1;
+                }
+            }
+        }
+    }
 
+    &__content {
+        display: flex;
+        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.05),
+        0px 0px 0px rgba(20, 59, 121, 0.03);
+        border-radius: 10px;
+        padding: 20px;
+        gap: 30px;
+        transition: 0.4s all;
+        .static__subtitle {
+            opacity: 0;
+            transition: 0.4s all;
+        }
+        &__svg {
+            opacity: 0;
+            transition: 0.4s 0.2s all;
+        }
+        &__text {
+            opacity: 0;
+            transition: 0.4s 0.4s all;
+        }
+        &__image {
+            flex-shrink: 0;
+            object-fit: cover;
+            border-radius: 10px;
+            opacity: 0;
+            transition: 0.4s all;
+        }
+
+        &__wrap {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        &__bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            opacity: 0;
+            transition: 0.4s 0.6s all;
+            .static__link_btn {
+                font-size: 18px;
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
         }
     }
 
