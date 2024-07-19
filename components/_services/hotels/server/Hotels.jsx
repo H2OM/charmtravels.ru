@@ -41,9 +41,8 @@ export default function Hotels() {
                             src={"/services/hotels/movenpick.jpg"}
                             className={"hotels__content__image"}
                             alt={"image"}
-                            height={0}
-                            width={0}
-                            sizes="100vw"
+                            height={500}
+                            width={800}
                             quality={100}
                             priority={true}
                         />
