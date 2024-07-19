@@ -18,7 +18,8 @@ export default function Tours({data}) {
                                 data.top.map((each, i) => {
                                     return (
                                         <div className={'tours__content__block'}
-                                             style={{transition: `0.4s ${0.2 * i}s all`}}>
+                                             style={{transition: `0.4s ${0.2 * i}s all`}}
+                                             key={each.title + i}>
                                             <Image
                                                 src={each.image}
                                                 className={"tours__content__block__image"}
@@ -64,7 +65,8 @@ export default function Tours({data}) {
                                 data.exotic.map((each, i) => {
                                     return (
                                         <div className={'tours__content__block'}
-                                             style={{transition: `0.4s ${0.2 * i}s all`}}>
+                                             style={{transition: `0.4s ${0.2 * i}s all`}}
+                                             key={each.title + i}>
                                             <Image
                                                 src={each.image}
                                                 className={"tours__content__block__image"}
@@ -110,7 +112,8 @@ export default function Tours({data}) {
                                 data.other.map((each, i) => {
                                     return (
                                         <div className={'tours__content__block'}
-                                             style={{transition: `0.4s ${0.2 * i}s all`}}>
+                                             style={{transition: `0.4s ${0.2 * i}s all`}}
+                                             key={each.title + i}>
                                             <Image
                                                 src={each.image}
                                                 className={"tours__content__block__image"}

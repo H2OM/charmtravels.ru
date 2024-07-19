@@ -9,7 +9,7 @@
 
     session_start();
 
-    Db::instance();
+//    Db::instance();
 
     if($Routing->determineRoute()) {
 
