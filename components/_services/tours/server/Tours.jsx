@@ -24,9 +24,8 @@ export default function Tours({data}) {
                                                 src={each.image}
                                                 className={"tours__content__block__image"}
                                                 alt={"image"}
-                                                height={0}
-                                                width={0}
-                                                sizes="100vw"
+                                                height={500}
+                                                width={600}
                                                 quality={100}
                                                 priority={true}
                                             />
@@ -71,9 +70,8 @@ export default function Tours({data}) {
                                                 src={each.image}
                                                 className={"tours__content__block__image"}
                                                 alt={"image"}
-                                                height={0}
-                                                width={0}
-                                                sizes="100vw"
+                                                height={500}
+                                                width={600}
                                                 quality={100}
                                                 priority={true}
                                             />
@@ -118,9 +116,8 @@ export default function Tours({data}) {
                                                 src={each.image}
                                                 className={"tours__content__block__image"}
                                                 alt={"image"}
-                                                height={0}
-                                                width={0}
-                                                sizes="100vw"
+                                                height={500}
+                                                width={600}
                                                 quality={100}
                                                 priority={true}
                                             />

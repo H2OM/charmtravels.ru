@@ -26,9 +26,8 @@ export default function Footer() {
                                 <Image
                                     src={"/logo/logo.png"}
                                     alt={"logo"}
-                                    height={0}
-                                    width={0}
-                                    sizes="100vw"
+                                    height={200}
+                                    width={200}
                                     quality={100}
                                     priority={true}
                                     className={"footer__content__main__block__image"}

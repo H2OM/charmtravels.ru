@@ -21,9 +21,8 @@ export default function Feedback({data}) {
                                         src={each.image}
                                         className={"feedback__slider__block__image"}
                                         alt={"image"}
-                                        height={0}
-                                        width={0}
-                                        sizes={"100vw"}
+                                        height={550}
+                                        width={360}
                                         quality={100}
                                         priority={true}
                                     />

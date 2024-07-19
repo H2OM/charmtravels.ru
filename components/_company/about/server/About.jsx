@@ -53,9 +53,8 @@ export default function About() {
                             src={"/logo/logo.png"}
                             className={"about__split__image"}
                             alt={"logo"}
-                            height={0}
-                            width={0}
-                            sizes="100vw"
+                            height={320}
+                            width={400}
                             quality={100}
                             priority={true}
                             style={{transition: "0.8s 1.6s all"}}

@@ -21,9 +21,8 @@ export default async function Team({data}) {
                                             src={each.image}
                                             className={"team__slider__content__item__image"}
                                             alt={"image"}
-                                            height={0}
-                                            width={0}
-                                            sizes="100vw"
+                                            height={450}
+                                            width={450}
                                             quality={100}
                                             priority={true}
                                         />

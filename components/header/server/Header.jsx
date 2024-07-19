@@ -16,9 +16,8 @@ export default function Header() {
                             src={"/logo/logo.png"}
                             className={"header__static__logo"}
                             alt={"logo"}
-                            height={0}
-                            width={0}
-                            sizes="100vw"
+                            height={200}
+                            width={200}
                             quality={100}
                             priority={true}
                         />
