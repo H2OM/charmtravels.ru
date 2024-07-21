@@ -18,7 +18,7 @@ export default function Excursions({data}) {
                                     return (
                                         <div className="excursions__content__block"
                                             key={each.title + i}
-                                            style={{transition:`0.4s ${0.4 * i}s all`}}>
+                                            style={{transition:`0.4s ${0.2 * i}s all`}}>
                                             <Image
                                                 src={each.image}
                                                 className={"excursions__content__block__image"}

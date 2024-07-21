@@ -1,7 +1,9 @@
 .excursions {
-    &_visible {
-        .excursions__content__block {
-            opacity: 1;
+    .visible-content {
+        &_visible {
+            .excursions__content__block {
+                opacity: 1;
+            }
         }
     }
     &__content {
