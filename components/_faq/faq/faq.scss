@@ -1,30 +1,73 @@
 .faq {
+    .visible-content {
+        &_visible {
+            .faq__accordion {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    }
     &__content {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 20px;
+
+        &__column {
+            display: flex;
+            flex-direction: column;
+        }
     }
 
     &__accordion {
         box-shadow: 0px 1px 23px rgba(0, 0, 0, 0.05), 0px 15px 30px rgba(20, 59, 121, 0.03);
         border-radius: 10px;
-        padding: 18px;
-        display: flex;
-        flex-direction: column;
+        padding: 0 40px;
         transition: 0.2s all;
-        &.active {
-            gap: 20px;
+        cursor: pointer;
+        margin-bottom: 20px;
+        transform: scale(0);
+        &._active {
             .faq__accordion__title {
                 color: $five;
+
+                &:after {
+                    transform: translateY(-50%) rotate(45deg);
+                }
             }
+
         }
+
         &__title {
             transition: 0.2s all;
+            min-height: 102px;
+            display: flex;
+            align-items: center;
+            padding-right: 28px;
+            position: relative;
+
+            &:after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%) rotate(-45deg);
+                border-bottom: 2px solid $five;
+                border-right: 2px solid $five;
+                border-bottom-right-radius: 2px;
+                width: 10px;
+                height: 10px;
+                transition: 0.2s all;
+            }
         }
 
         &__content {
-            height: 0px;
+            height: 0;
             overflow: hidden;
+            transition: 0.2s all;
+
+            p {
+                padding: 20px 35px 20px 25px;
+            }
         }
     }
 }
