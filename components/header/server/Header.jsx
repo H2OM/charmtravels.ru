@@ -100,6 +100,7 @@ export default function Header() {
 
                         <div className="header__nav__wrap__buttons">
                             <Link href={process.env.anketa}
+                                  target={"_blank"}
                                   className={"static__link_btn static__link"}>
                                 Подбор тура
                             </Link>
