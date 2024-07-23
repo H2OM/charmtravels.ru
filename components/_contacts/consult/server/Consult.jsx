@@ -1,7 +1,6 @@
 import '../consult.scss';
 import ContentVisible from "@/lib/basecomponents/contentVisible/contentVisible";
 import Form from "@/components/_contacts/consult/client/Form";
-import Image from "next/image";
 
 export default function Consult() {
     return (

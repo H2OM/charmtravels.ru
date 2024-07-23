@@ -12,10 +12,11 @@
     &__form {
         width: 1080px;
         margin: 0 auto;
+        position: relative;
         &__input {
             background-color: $seven;
             width: 100%;
-            box-shadow: 0px 1px 23px rgba(0, 0, 0, 0.05),
+            box-shadow: 0px 1px 23px #00000017,
             0px 15px 30px rgba(20, 59, 121, 0.03);
             border-radius: 10px;
             height: fit-content;
@@ -39,13 +40,26 @@
         }
         &__error {
             display: block;
-            color: $three;
+            color: $five;
             height: 0;
+            opacity: 0;
+            font-weight: 500;
             overflow: hidden;
             transition: opacity 0.2s, height 0.2s 0.2s;
+            &:before {
+                content: '';
+                display: inline-block;
+                background-image: url('/svg/info-lg.svg');
+                background-size: cover;
+                background-position: center center;
+                height: 22px;
+                width: 26px;
+                margin-bottom: -3px;
+                margin-right: -3px;
+            }
             &._active {
                 opacity: 1;
-                height: 20px;
+                height: 36px;
                 transition: height 0.2s, opacity 0.2s 0.2s;
             }
         }
@@ -87,6 +101,26 @@
                 height: 5px;
             }
         }
+        &__message {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            //height: 70px;
+            //margin: 0 auto;
+            margin-bottom: 25px;
+            border-bottom: 4px solid $five;
+            background-color: $seven;
+            border-radius: 10px;
+            box-shadow: 0px 1px 23px #00000017,
+            0px 15px 30px rgba(20, 59, 121, 0.03);
+            transition: 0.2s all;
+            overflow: hidden;
+            animation: messageOpen 0.4s forwards linear;
+            &._close {
+                animation: messageClose 0.4s forwards linear;
+            }
+        }
     }
 
     &__button {
@@ -98,5 +132,46 @@
         &:hover {
             outline: 2px solid $six;
         }
+    }
+}
+
+@keyframes messageOpen {
+    from {
+        height: 0;
+        margin-bottom: 0;
+        border-bottom: 0px solid $five;
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+        height: 35px;
+        margin-bottom: 0;
+        border-bottom: 2px solid $five;
+    }
+    to {
+        opacity: 1;
+        height: 70px;
+        margin-bottom: 25px;
+        border-bottom: 4px solid $five;
+    }
+}
+@keyframes messageClose {
+    from {
+        height: 70px;
+        margin-bottom: 25px;
+        border-bottom: 4px solid $five;
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+        height: 35px;
+        margin-bottom: 0;
+        border-bottom: 2px solid $five;
+    }
+    to {
+        opacity: 0;
+        height: 0;
+        margin-bottom: 0;
+        border-bottom: 0px solid $five;
     }
 }
