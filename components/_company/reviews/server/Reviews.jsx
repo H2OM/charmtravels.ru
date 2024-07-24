@@ -50,12 +50,12 @@ export default function Reviews({data}) {
                         <div className="reviews__2gis__text static__subtitle2">
                             У нас так же есть отзывы в 2ГИС
                         </div>
-                        {/*<iframe src="https://swdgts.ru/28fee229f7491c4f23998bfa50d288bb"*/}
-                        {/*        className={"reviews__2gis__content"}*/}
-                        {/*        width="100%"*/}
-                        {/*        height="300"*/}
-                        {/*        frameBorder="0">*/}
-                        {/*</iframe>*/}
+                        <iframe src="https://swdgts.ru/28fee229f7491c4f23998bfa50d288bb"
+                                className={"reviews__2gis__content"}
+                                width="100%"
+                                height="300"
+                                frameBorder="0">
+                        </iframe>
                     </div>
                 </ContentVisible>
             </div>
