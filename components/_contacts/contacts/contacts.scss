@@ -1,4 +1,27 @@
 .contacts {
+    .visible-content {
+        &_visible {
+            .contacts {
+                &__grid {
+                    &__block {
+                        transform: translateY(0%);
+
+                        &_more {
+                            transform: translateY(0%);
+                        }
+                    }
+                }
+                &__desc {
+                    transform: translateX(0%);
+                }
+
+            }
+            iframe {
+                transform: scale(1);
+            }
+        }
+    }
+
     &__grid {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
@@ -7,6 +30,7 @@
         row-gap: 30px;
         column-gap: 12px;
         overflow: hidden;
+
         &__block {
             justify-self: center;
             align-items: center;
@@ -15,12 +39,14 @@
             gap: 10px;
             text-align: center;
             transform: translateY(-100%);
-            animation: manifest-top-bottom 0.6s forwards;
+            transition: transform 0.6s;
+
             &_more {
                 transform: translateY(100%);
                 grid-column: 1/4;
-                animation: manifest-bottom-top 0.6s 0.6s forwards;
+                transition: transform 0.6s 0.6s;
             }
+
             &__big {
                 display: flex;
                 flex-direction: column;
@@ -28,6 +54,7 @@
                 margin-top: 15px;
                 gap: 15px;
             }
+
             .static__link {
                 display: flex;
                 justify-content: center;
@@ -79,24 +106,14 @@
             }
         }
     }
+    iframe {
+        transition: 0.4s 0.6s ease-out;
+        transform: scale(0);
+    }
     &__desc {
         margin-top: 110px;
         margin-bottom: 50px;
-    }
-}
-@keyframes manifest-bottom-top {
-    from {
-        transform: translateY(100%);
-    }
-    to {
-        transform: translateY(0%);
-    }
-}
-@keyframes manifest-top-bottom {
-    from {
-        transform: translateY(-100%);
-    }
-    to {
-        transform: translateY(0%);
+        transition: 0.6s 0.6s all ease-out;
+        transform: translateX(-50%);
     }
 }

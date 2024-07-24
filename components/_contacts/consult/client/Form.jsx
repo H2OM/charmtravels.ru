@@ -124,6 +124,7 @@ export default function Form() {
             <input type="text"
                    name={"name"}
                    className={"consult__form__input"}
+                   style={{transition: "0.2s all, opacity 0.4s"}}
                    placeholder={"Ваше имя"} required={true}
                    value={nameInput}
                    disabled={isSubmitting}
@@ -160,23 +161,27 @@ export default function Form() {
                     if (phoneRef.current.value === "+7 (___) ___-__-__") setLazy(true);
                 }}
                 className={"consult__form__input"}
+                style={{transition: "0.2s all, opacity 0.4s 0.1s"}}
                 name={"phone"}
                 required={true}
                 placeholder="Ваш телефон (к которому привязан WhatsApp/Telegram)"
             />
             <textarea name={"message"}
                       className={"consult__form__input _textarea"}
+                      style={{transition: "0.2s all, opacity 0.4s 0.2s"}}
                       placeholder={"Пожелания к отдыху"}
                       disabled={isSubmitting}
                       rows={8} maxLength={2000}>
             </textarea>
-            <button className={"consult__form__input consult__button"} disabled={isSubmitting}>
+            <button className={"consult__form__input consult__button"}
+                    style={{transition: "0.2s all, opacity 0.4s 0.3s"}}
+                    disabled={isSubmitting}>
                 Отправить
             </button>
             <label htmlFor="phone" className={"consult__form__error " + (errors.policy ? "_active" : "")}>
                 Согласие с обработкой данных обязательно
             </label>
-            <label>
+            <label className={"consult__form__under"} style={{transition: "0.4s all, opacity 0.2s 0.4s"}}>
                 <input type="checkbox"
                        name={"policy"}
                        ref={policyRef}
