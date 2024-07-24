@@ -88,7 +88,7 @@ export default function Header() {
                                                 выбирают</Link>
                                         </li>
                                         <li className={"header__nav__open__menu__list__item"}>
-                                            <Link href={"/company#feedback"} className={"static__link"}>Отзывы</Link>
+                                            <Link href={"/company#reviews"} className={"static__link"}>Отзывы</Link>
                                         </li>
                                         <li className={"header__nav__open__menu__list__item"}>
                                             <Link href={"/company#requisites"} className={"static__link"}>Реквизиты</Link>
