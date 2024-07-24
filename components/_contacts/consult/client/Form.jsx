@@ -130,8 +130,6 @@ export default function Form() {
                    disabled={isSubmitting}
                    minLength={3} maxLength={70}
                    onChange={(e) => {
-                       console.log(e.target.value);
-                       console.log(nameInput.length);
                        e.preventDefault();
                        setNameInput(e.target.value);
                        if (errors.name && e.target.value.length >= 3 && e.target.value.length <= 70) {

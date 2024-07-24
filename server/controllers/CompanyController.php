@@ -26,7 +26,7 @@ class CompanyController extends Runner
             "advantages" => $this->companyService->get_advantages(),
             "pick"=>$this->companyService->get_pick_us(),
             "stages"=>$this->companyService->get_stages(),
-            "feedback"=>$this->companyService->get_feedback()
+            "reviews"=>$this->companyService->get_reviews()
         ]];
 
         exit(json_encode($response));
@@ -37,9 +37,9 @@ class CompanyController extends Runner
      *
      * @return void
      */
-    protected function getFedback(): void
+    protected function getReviews(): void
     {
-        exit(json_encode(["content" => $this->companyService->get_feedback()]));
+        exit(json_encode(["content" => $this->companyService->get_reviews()]));
     }
 
     /**

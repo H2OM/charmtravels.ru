@@ -20,7 +20,6 @@ export default async function GET_DATA({controller, action, cache= "no-cache"}) 
             return data;
         })
         .catch((e) => {
-            console.log(e);
             return false;
         });
 }

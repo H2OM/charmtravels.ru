@@ -1,4 +1,34 @@
-.feedback {
+.reviews {
+    overflow-x: hidden;
+    .visible-content {
+        &_visible {
+            .reviews__text {
+                transform: translateX(0%);
+            }
+            .reviews__slider {
+                &__pagination,
+                .static__nav__left,
+                .static__nav__right {
+                    opacity: 1;
+                }
+                &__block {
+                    transform: translateY(0%);
+                }
+            }
+            .reviews__2gis{
+                &__text {
+                    opacity: 1;
+                }
+                &__content {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    .reviews__text {
+        transition: 0.6s all ease-out;
+        transform: translateX(-80%);
+    }
     &__slider {
         position: relative;
         margin-top: 40px;
@@ -24,6 +54,7 @@
             align-items: center;
             gap: 24px;
             text-align: center;
+            transform: translateY(100%);
             &__image {
                 height: 500px;
                 width: fit-content;
@@ -36,6 +67,8 @@
             display: flex;
             justify-content: center;
             gap: 14px;
+            transition: 0.4s 0.4s all;
+            opacity: 0;
             &__dot {
                 width: 15px;
                 height: 15px;
@@ -55,9 +88,26 @@
         }
         .static__nav__left {
             left: 0;
+            opacity: 0;
+            transition: 0.4s 0.4s all;
         }
         .static__nav__right {
             right: 0;
+            opacity: 0;
+            transition: 0.4s 0.4s all;
+        }
+    }
+    &__2gis {
+        &__text {
+            text-align: center;
+            margin-top: 80px;
+            margin-bottom: 40px;
+            opacity: 0;
+            transition: 0.4s all;
+        }
+        &__content {
+            transition: 0.4s 0.2s all;
+            opacity: 0;
         }
     }
 }

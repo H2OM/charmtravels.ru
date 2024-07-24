@@ -262,7 +262,7 @@ class CompanyService
      *
      * @return array
      */
-    public function get_feedback(): array
+    public function get_reviews(): array
     {
         return [
             [

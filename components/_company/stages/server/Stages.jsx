@@ -14,7 +14,7 @@ export default function Stages({data}) {
                                 <div className={"stages__block"} key={i}>
                                     <div className={"stages__block__count static__title"}>{i + 1}</div>
                                     <div className="stages__block__wrap"
-                                         style={{transition: `0.4s ${(4 / data.length) * i}s all`}}>
+                                         style={{transition: `0.4s ${(2.6 / data.length) * i}s all`}}>
                                         <div className="static__subtitle">
                                             {each.title}
                                         </div>
