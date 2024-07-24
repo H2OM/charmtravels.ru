@@ -8,10 +8,10 @@ export default function Form() {
     const [isLazy, setLazy] = useState(true);
     const phoneRef = useRef(null);
     const policyRef = useRef(null);
-    const [isSubmiting, setSubmiting] = useState(false);
+    const [isSubmitting, setSubmitting] = useState(false);
     const [nameInput, setNameInput] = useState('');
     const [message, setMessage] = useState({
-        text: "Ваше сообщение доставлено",
+        text: false,
         status: true,
         open: false
     });
@@ -48,7 +48,7 @@ export default function Form() {
 
         const formData = new FormData(e.target);
 
-        setSubmiting(true);
+        setSubmitting(true);
 
         await fetch('/api/form/callback', {method: 'POST', body: formData})
             .then((response) => {
@@ -60,27 +60,24 @@ export default function Form() {
                 return response.json();
             })
             .then((data) => {
-                if (!data.message) {
+                if (data.content === undefined || data.content.message === undefined) {
                     throw new Error();
                 }
 
-                setMessage((current) => ({...current, message: data.message, open: true}));
+                setMessage((current) => ({...current, text: data.content.message, open: true}));
 
                 e.target.reset();
 
                 setNameInput('');
             })
             .catch(() => {
-                setMessage((current) => (
-                    {
-                        ...current,
+                setMessage(({
                         status: false,
-                        message: 'Непредвиденная ошибка, попробуйте перезагрузить страницу.',
+                        text: 'Непредвиденная ошибка, попробуйте перезагрузить страницу.',
                         open: true
-                    }
-                ));
+                }));
             })
-            .finally(() => setSubmiting(false));
+            .finally(() => setSubmitting(false));
 
     };
 
@@ -110,10 +107,14 @@ export default function Form() {
     }, [message.open]);
 
     return (
-        <form className={"consult__form"} noValidate={true} onSubmit={submitHandler}>
+        <form className={"consult__form " + (isSubmitting ? "_submitting" : "")} noValidate={true} onSubmit={submitHandler}>
             {
                 message.open &&
-                <div className={"consult__form__message " + (message.open === "close" ? "_close" : "")}>
+                <div className={
+                    "consult__form__message "
+                    + (message.status ? "_success" : "_error")
+                    + (message.open === "close" ? " _close" : "")
+                }>
                     {message.text}
                 </div>
             }
@@ -125,6 +126,7 @@ export default function Form() {
                    className={"consult__form__input"}
                    placeholder={"Ваше имя"} required={true}
                    value={nameInput}
+                   disabled={isSubmitting}
                    minLength={3} maxLength={70}
                    onChange={(e) => {
                        console.log(e.target.value);
@@ -144,6 +146,7 @@ export default function Form() {
                 radix={"."}
                 unmask={true} // true|false|'typed'
                 lazy={isLazy}
+                disabled={isSubmitting}
                 inputRef={phoneRef}
                 onAccept={(value, mask) => {
                     if (errors.phone && !RegExp(/_/).test(phoneRef.current.value)) {
@@ -164,9 +167,10 @@ export default function Form() {
             <textarea name={"message"}
                       className={"consult__form__input _textarea"}
                       placeholder={"Пожелания к отдыху"}
+                      disabled={isSubmitting}
                       rows={8} maxLength={2000}>
             </textarea>
-            <button className={"consult__form__input consult__button"} disabled={isSubmiting}>
+            <button className={"consult__form__input consult__button"} disabled={isSubmitting}>
                 Отправить
             </button>
             <label htmlFor="phone" className={"consult__form__error " + (errors.policy ? "_active" : "")}>
@@ -176,6 +180,7 @@ export default function Form() {
                 <input type="checkbox"
                        name={"policy"}
                        ref={policyRef}
+                       disabled={isSubmitting}
                        className={"consult__form__checkbox"}
                        required={true}
                        onChange={({target}) => {

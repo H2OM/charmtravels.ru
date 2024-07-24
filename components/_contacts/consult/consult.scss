@@ -13,6 +13,11 @@
         width: 1080px;
         margin: 0 auto;
         position: relative;
+        &._submitting {
+            .consult__form__input {
+                background-color: #f5f5f5;
+            }
+        }
         &__input {
             background-color: $seven;
             width: 100%;
@@ -109,7 +114,7 @@
             //height: 70px;
             //margin: 0 auto;
             margin-bottom: 25px;
-            border-bottom: 4px solid $five;
+
             background-color: $seven;
             border-radius: 10px;
             box-shadow: 0px 1px 23px #00000017,
@@ -117,6 +122,12 @@
             transition: 0.2s all;
             overflow: hidden;
             animation: messageOpen 0.4s forwards linear;
+            &._success {
+                border-bottom: 4px solid $five;
+            }
+            &._error {
+                border-bottom: 4px solid #ef0000;
+            }
             &._close {
                 animation: messageClose 0.4s forwards linear;
             }
@@ -139,39 +150,33 @@
     from {
         height: 0;
         margin-bottom: 0;
-        border-bottom: 0px solid $five;
         opacity: 0;
     }
     50% {
         opacity: 1;
         height: 35px;
         margin-bottom: 0;
-        border-bottom: 2px solid $five;
     }
     to {
         opacity: 1;
         height: 70px;
         margin-bottom: 25px;
-        border-bottom: 4px solid $five;
     }
 }
 @keyframes messageClose {
     from {
         height: 70px;
         margin-bottom: 25px;
-        border-bottom: 4px solid $five;
         opacity: 1;
     }
     50% {
         opacity: 0;
         height: 35px;
         margin-bottom: 0;
-        border-bottom: 2px solid $five;
     }
     to {
         opacity: 0;
         height: 0;
         margin-bottom: 0;
-        border-bottom: 0px solid $five;
     }
 }
