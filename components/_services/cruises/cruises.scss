@@ -4,6 +4,7 @@
             .cruises__content {
                 box-shadow: 0px 1px 23px rgba(0, 0, 0, 0.05),
                 0px 15px 30px rgba(20, 59, 121, 0.03);
+                border: 1px solid #EAEAEA;
                 .static__subtitle,
                 &__svg,
                 &__text,
@@ -20,6 +21,7 @@
         box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.05),
         0px 0px 0px rgba(20, 59, 121, 0.03);
         border-radius: 10px;
+        border: 0 solid #EAEAEA;
         padding: 20px;
         gap: 30px;
         transition: 0.4s all;

@@ -4,6 +4,7 @@
             .faq__accordion {
                 opacity: 1;
                 transform: scale(1);
+                border: 1px solid #EAEAEA;
             }
         }
     }
@@ -26,6 +27,7 @@
         cursor: pointer;
         margin-bottom: 20px;
         transform: scale(0);
+        border: 0 solid #EAEAEA;
         &._active {
             .faq__accordion__title {
                 color: $five;

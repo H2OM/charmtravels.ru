@@ -1,7 +1,9 @@
 .consult {
     .visible-content {
         &_visible {
-            .consult__form__input,
+            .consult__form__input {
+                opacity: 1;
+            }
             .consult__form__under {
                 opacity: 1;
             }
@@ -37,6 +39,7 @@
             outline: 2px solid transparent;
             margin-bottom: 20px;
             opacity: 0;
+            border: 0 solid #EAEAEA;
             &::placeholder {
                 color: $gray;
             }
