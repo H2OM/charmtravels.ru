@@ -68,4 +68,14 @@ class ServicesController extends Runner
     {
         exit(json_encode(["content" => $this->servicesService->get_excursions()]));
     }
+
+    /**
+     * Action блока 'горящие туры'
+     *
+     * @return void
+     */
+    protected function getHot() : void
+    {
+        exit(json_encode(["content"=>$this->servicesService->get_hot()]));
+    }
 }

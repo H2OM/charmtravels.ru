@@ -4,6 +4,11 @@ namespace app\services;
 
 class ServicesService
 {
+    /**
+     * Получение блока 'цены'
+     *
+     * @return array
+     */
     public function get_prices(): array
     {
         return [
@@ -62,6 +67,11 @@ class ServicesService
         ];
     }
 
+    /**
+     * Получение блока 'круизы'
+     *
+     * @return array
+     */
     public function get_cruises(): array
     {
         return [
@@ -77,6 +87,11 @@ class ServicesService
         ];
     }
 
+    /**
+     * Получение блока 'туры'
+     *
+     * @return array
+     */
     public function get_tours(): array
     {
         return [
@@ -161,6 +176,11 @@ class ServicesService
         ];
     }
 
+    /**
+     * Получение блока 'экскурсии'
+     *
+     * @return array
+     */
     public function get_excursions(): array
     {
         return [
@@ -179,6 +199,33 @@ class ServicesService
                 "price" => 'от 311 600 ₽ за двоих',
                 "image" => '/services/excursions/seul.jpg'
             ],
+        ];
+    }
+
+    /**
+     * Получение блока 'горящие туры'
+     *
+     * @return array
+     */
+    public function get_hot() : array
+    {
+        return [
+            [
+                "title"=>"Турция",
+                "price"=>"55 000 ₽",
+                "image"=>"/hot/turkish.jpg"
+            ],
+            [
+                "title"=>"Турция",
+                "price"=>"55 000 ₽",
+                "image"=>"/hot/turkish.jpg"
+            ],
+            [
+                "title"=>"Турция",
+                "price"=>"55 000 ₽",
+                "image"=>"/hot/turkish.jpg"
+            ],
+
         ];
     }
 }

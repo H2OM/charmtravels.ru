@@ -73,7 +73,7 @@ class CompanyController extends Runner
     }
 
     /**
-     * Action блок 'команда'
+     * Action блока 'команда'
      *
      * @return void
      */

@@ -23,7 +23,7 @@ export default function SafeSlider({length, children}) {
                     Array.from({length: Math.ceil(length / currentCount)}).map((each, i) => {
                         return (
                             <div key={i}
-                                 className={"feedback__slider__pagination__dot " + (currentSlide === i ? "active" : "")}
+                                 className={"reviews__slider__pagination__dot " + (currentSlide === i ? "active" : "")}
                                  onClick={() => setCurrentSlide(i)}></div>
                         )
                     })
