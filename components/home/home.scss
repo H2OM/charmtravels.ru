@@ -5,6 +5,89 @@
         }
     }
     &__banner {
-
+        display: flex;
+        gap: 10vw;
+        transition: 0.4s all cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        &__wrap {
+            position: relative;
+        }
+        &__pagination {
+            position: absolute;
+            display: flex;
+            gap: 4px;
+            left: 50%;
+            bottom: 8%;
+            transform: translateX(-50%);
+            z-index: 5;
+            &__dot {
+                background-color: $seven;
+                border-radius: 4px;
+                height: 4px;
+                width: 90px;
+                opacity: 0.4;
+                transition: 0.2s all;
+                cursor: pointer;
+                &._active {
+                    opacity: 0.8;
+                    width: 110px;
+                }
+            }
+        }
+        &__slide {
+            width: 100%;
+            height: 700px;
+            position: relative;
+            padding-top: 150px;
+            padding-left: 150px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            flex-shrink: 0;
+            .static__title {
+                position: relative;
+                z-index: 5;
+                color: $seven;
+                margin: 0;
+                font-size: 52px;
+            }
+            .static__subtitle2 {
+                position: relative;
+                z-index: 5;
+                font-size: 28px;
+                color: $seven;
+            }
+            .static__link_btn {
+                &._animate {
+                    position: relative;
+                    z-index: 5;
+                    color: $seven;
+                    font-size: 20px;
+                    margin: 0;
+                    width: 300px;
+                    &:hover {
+                        color: $six;
+                        border: 1px solid $six;
+                        &:after {
+                            border-bottom: 1px solid $six;
+                            border-right: 1px solid $six;
+                            right: 12px;
+                        }
+                    }
+                }
+            }
+            &__image {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+                object-fit: cover;
+                filter: brightness(0.6);
+                border-radius: 10px;
+                box-shadow: 0px 1px 23px rgba(0, 0, 0, 0.05),
+                            0px 15px 30px rgba(20, 59, 121, 0.03);
+            }
+        }
     }
 }

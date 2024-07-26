@@ -13,9 +13,19 @@ class MainService
     {
         return [
             [
-                "title" => "",
-                "text" => "",
-                "image"=>""
+                'title' => 'Туры из любой точки<br/>России',
+                'text' => 'Путешествия доступны каждому',
+                'image'=>'/home/slider/slide1.jpg',
+            ],
+            [
+                'title' => 'Туры из любой точки<br/>России',
+                'text' => 'Путешествия доступны каждому',
+                'image'=>'/home/slider/slide1.jpg',
+            ],
+            [
+                'title' => 'Туры из любой точки<br/>России',
+                'text' => 'Путешествия доступны каждому',
+                'image'=>'/home/slider/slide1.jpg',
             ],
         ];
     }

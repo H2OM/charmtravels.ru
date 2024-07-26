@@ -2,6 +2,7 @@ import '../hot.scss';
 import ContentVisible from "@/lib/basecomponents/contentVisible/contentVisible";
 import ErrorBlock from "@/lib/basecomponents/errorblock/ErrorBlock";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Hot({data}) {
     return (
@@ -37,9 +38,9 @@ export default function Hot({data}) {
                                                 <div className={"hot__content__block__split__price static__subtitle"}>
                                                     {each.price}
                                                 </div>
-                                                <div className="static__link_btn">
+                                                <Link href={"/contacts#consult"} className="static__link_btn _animate">
                                                     Консультация
-                                                </div>
+                                                </Link>
                                             </div>
                                         </div>
                                     )
