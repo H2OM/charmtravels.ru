@@ -2,6 +2,7 @@ import '../faq.scss';
 import ErrorBlock from "@/lib/basecomponents/errorblock/ErrorBlock";
 import Accordion from "@/components/_faq/faq/client/Accordion";
 import ContentVisible from "@/lib/basecomponents/contentVisible/contentVisible";
+import Consult from "@/components/_contacts/consult/server/Consult";
 
 export default function Faq({data}) {
     const firstColumn = data.slice(0, Math.ceil(data.length / 2));
@@ -51,6 +52,7 @@ export default function Faq({data}) {
                 {
                     !data && <ErrorBlock/>
                 }
+                <Consult/>
             </div>
         </section>
     )

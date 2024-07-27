@@ -52,6 +52,27 @@ export default function Hot({data}) {
                 {
                     !data && <ErrorBlock/>
                 }
+                <ContentVisible>
+                    <div className="hot__banner">
+                        <Image
+                            src={"/other/messenger.png"}
+                            className={"hot__banner__image"}
+                            alt={"logo"}
+                            height={450}
+                            width={265}
+                            quality={100}
+                            priority={true}
+                        />
+                        <div className="hot__banner__split">
+                            <div className="static__title">Подключитесь к ленте горящих туров</div>
+                            <div className="static__subtitle2">В своем мессенджере</div>
+                            <div className="hot__banner__split__under">
+                                <Link href={'https://t.me/charmtravelhot'} className={"static__link_btn _animate"} target={"_blank"}>Telegram</Link>
+                                <Link href={'https://chat.whatsapp.com/Hg9wPPEoLH9095eOlG3SaE'} className={"static__link_btn _animate"} target={"_blank"}>WhatsApp</Link>
+                            </div>
+                        </div>
+                    </div>
+                </ContentVisible>
             </div>
         </section>
     )

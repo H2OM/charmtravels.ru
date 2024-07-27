@@ -1,4 +1,14 @@
 .team {
+    .visible-content {
+        &_visible {
+            .team__slider {
+                opacity: 1;
+                &__wrap {
+                    opacity: 1;
+                }
+            }
+        }
+    }
     &__slider {
         position: relative;
         overflow-x: hidden;
@@ -8,7 +18,8 @@
         gap: 80px;
         padding-top: 50px;
         margin-top: -50px;
-
+        transition: 0.4s all;
+        opacity: 0;
         &__bar {
             position: relative;
             gap: 20px;
@@ -107,6 +118,8 @@
         }
         &__wrap {
             position: relative;
+            transition: 0.4s 0.2s opacity;
+            opacity: 0;
             .static__nav__left, .static__nav__right {
                 position: absolute;
                 top: 50%;

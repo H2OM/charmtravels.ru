@@ -1,0 +1,9 @@
+<svg width="46" height="34" viewBox="0 0 46 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path class="tgo-color-stroke"
+      d="M39 17C39 13.686 41.686 11 45 11V1H1V11C4.314 11 7 13.686 7 17C7 20.314 4.314 23 1 23V33H45V23C41.686 23 39 20.314 39 17Z"
+      stroke="#1e8a73" stroke-width="2" stroke-miterlimit="10" stroke-linecap="square"></path>
+<path class="tgo-color-stroke" d="M15 13H31" stroke="#1e8a73" stroke-width="2" stroke-miterlimit="10"
+      stroke-linecap="square"></path>
+<path class="tgo-color-stroke" d="M15 21H31" stroke="#1e8a73" stroke-width="2" stroke-miterlimit="10"
+      stroke-linecap="square"></path>
+</svg>

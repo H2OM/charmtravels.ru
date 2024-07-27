@@ -5,6 +5,9 @@
                 transform: scale(1);
                 border: 1px solid #EAEAEA;
             }
+            .hot__banner {
+                opacity: 1;
+            }
         }
     }
     .static__title {
@@ -60,6 +63,59 @@
                 border-radius: 10px;
                 object-fit: none;
                 width: 100%;
+            }
+        }
+    }
+    &__banner {
+        margin-top: 160px;
+        border-radius: 10px;
+        height: 420px;
+        width: 100%;
+        background-color: $five;
+        border: 1px solid #EAEAEA;
+        display: flex;
+        gap: 50px;
+        justify-content: center;
+        background-image: url("/svg/messenger-bg.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        transition: 0.4s all;
+        opacity: 0;
+        &__image {
+            margin-top: -31px;
+            object-fit: contain;
+        }
+        .static__subtitle2 {
+            color: $seven;
+        }
+        .static__title {
+            color: $seven;
+            margin: 0;
+        }
+        &__split {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 30px;
+            &__under {
+                display: flex;
+                gap: 10px;
+                .static__link_btn {
+                    &._animate {
+                        margin: 0;
+                        color: $seven;
+                        width: auto;
+                        &:hover {
+                            border: 1px solid $seven;
+                            color: $seven;
+                            &:after {
+                                border-bottom: 1px solid $seven;
+                                border-right: 1px solid $seven;
+                            }
+                        }
+                    }
+                }
             }
         }
     }
