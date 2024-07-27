@@ -5,7 +5,7 @@ import '../home.scss';
 import Link from "next/link";
 import HomeSlider from "@/components/home/client/HomeSlider";
 import Hot from "@/components/_hot/hot/server/Hot";
-import Prices from "@/components/_services/Prices/server/Prices";
+import Prices from "@/components/_services/prices/server/Prices";
 import Advantages from "@/components/_company/achievements/server/Advantages";
 import Consult from "@/components/_contacts/consult/server/Consult";
 import Reviews from "@/components/_company/reviews/server/Reviews";
