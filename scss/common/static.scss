@@ -150,3 +150,11 @@
         }
     }
 }
+
+@media (max-width: 780px) {
+    .static__info {
+        a, span, h1 {
+            font-size: 16px;
+        }
+    }
+}

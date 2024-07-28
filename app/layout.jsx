@@ -2,7 +2,6 @@ import '@/scss/global.scss';
 import localFont from 'next/font/local';
 import {ClientProvider} from "@/lib/context/ClientContext";
 import Header from "@/components/header/server/Header";
-import Popup from "@/components/popup/server/Popup";
 import Footer from "@/components/footer/server/Footer";
 import SET_ENV_INFO from "@/lib/info/SET_ENV_INFO";
 
@@ -112,12 +111,11 @@ export default async function RootLayout({children}) {
         <html lang="ru" className={montserrat.className}>
         <body>
         <ClientProvider>
-            <Popup/>
             <Header/>
             <main>
                 {children}
             </main>
-            <Footer/>
+            {/*<Footer/>*/}
         </ClientProvider>
         </body>
         </html>

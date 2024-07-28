@@ -2,8 +2,8 @@ import Link from "next/link";
 import Openmenu from "@/components/header/client/Openmenu";
 import Image from "next/image";
 import "../header.scss";
-import Navigation from "@/components/header/client/Navigation";
 import HeaderMover from "@/components/header/client/HeaderMover";
+import MobileMenu from "@/components/header/client/MobileMenu";
 
 export default function Header() {
 
@@ -28,22 +28,11 @@ export default function Header() {
                     </div>
                 </div>
                 <HeaderMover>
-                    <div className="container header__nav__wrap">
-                        <div className={"header__nav__mobile header__nav__mobile__logo"}>
-                            <Image
-                                src={"/logo/logo.png"}
-                                alt={"logo"}
-                                height={0}
-                                width={0}
-                                sizes="100vw"
-                                quality={100}
-                                priority={true}
-                            />
-                        </div>
-                        <Navigation>
-                            <Link href={"/hot"} className={"static__link hl_after"}>Горящие туры</Link>
-                            <Link href={"/faq"} className={"static__link hl_after"}>Часто задаваемые вопросы</Link>
-                            <Link href={"/contacts"} className={"static__link hl_after"}>Контакты</Link>
+                    <div className="header__nav__wrap">
+                        <div className={"header__nav__navigation"}>
+                            <Link href={"/hot"} className={"static__link hl_after"} data-adapt={'1130'}>Горящие туры</Link>
+                            <Link href={"/faq"} className={"static__link hl_after"} data-adapt={'1130'}>Часто задаваемые вопросы</Link>
+                            <Link href={"/contacts"} className={"static__link hl_after"} data-adapt={'780'}>Контакты</Link>
                             <div className={"static__link hl_after"}>
                                 <Openmenu title={"Услуги"}>
                                     <ul className={"header__nav__open__menu__list"}>
@@ -60,14 +49,15 @@ export default function Header() {
                                             <Link href={"/services#cruises"} className={"static__link"}>Круизы</Link>
                                         </li>
                                         <li className={"header__nav__open__menu__list__item"}>
-                                            <Link href={"/services#excursions"} className={"static__link"}>Экскурсии</Link>
+                                            <Link href={"/services#excursions"}
+                                                  className={"static__link"}>Экскурсии</Link>
                                         </li>
                                     </ul>
                                 </Openmenu>
                             </div>
                             <div className={"static__link hl_after"}>
                                 <Openmenu title={"О компании"}>
-                                <ul className={"header__nav__open__menu__list"}>
+                                    <ul className={"header__nav__open__menu__list"}>
                                         <li className={"header__nav__open__menu__list__item"}>
                                             <Link href={"/company#about"} className={"static__link"}>О нас</Link>
                                         </li>
@@ -91,12 +81,13 @@ export default function Header() {
                                             <Link href={"/company#reviews"} className={"static__link"}>Отзывы</Link>
                                         </li>
                                         <li className={"header__nav__open__menu__list__item"}>
-                                            <Link href={"/company#requisites"} className={"static__link"}>Реквизиты</Link>
+                                            <Link href={"/company#requisites"}
+                                                  className={"static__link"}>Реквизиты</Link>
                                         </li>
                                     </ul>
                                 </Openmenu>
                             </div>
-                        </Navigation>
+                        </div>
 
                         <div className="header__nav__wrap__buttons">
                             <Link href={process.env.anketa}
@@ -114,9 +105,25 @@ export default function Header() {
                                         fill="white"></path>
                                 </svg>
                             </Link>
-                            <button className={"header__nav__mobile header__nav__mobile__burger"}>
-
-                            </button>
+                            <MobileMenu>
+                                <Link href={"/hot"} className={"static__link"} data-adapt={'1130'}>Горящие туры</Link>
+                                <Link href={"/faq"} className={"static__link"} data-adapt={'1130'}>Часто задаваемые вопросы</Link>
+                                <Link href={"/contacts"} className={"static__link "} data-adapt={'780'}>Контакты</Link>
+                                <div className={"header__nav__mobile__menu__title"}>Услуги</div>
+                                <Link href={"/services#prices"} className={"static__link"}>Цены</Link>
+                                <Link href={"/services#tours"} className={"static__link"}>Туры</Link>
+                                <Link href={"/services#hotels"} className={"static__link"}>Отели</Link>
+                                <Link href={"/services#cruises"} className={"static__link"}>Круизы</Link>
+                                <Link href={"/services#excursions"} className={"static__link"}>Экскурсии</Link>
+                                <div className={"header__nav__mobile__menu__title"}>О компании</div>
+                                <Link href={"/company#about"} className={"static__link"}>О нас</Link>
+                                <Link href={"/company#team"} className={"static__link"}>Наша команда</Link>
+                                <Link href={"/company#stages"} className={"static__link"}>Этапы нашей работы</Link>
+                                <Link href={"/company#advantages"} className={"static__link"}>Наши преимущества</Link>
+                                <Link href={"/company#pick"} className={"static__link"}>Почему нас выбирают</Link>
+                                <Link href={"/company#reviews"} className={"static__link"}>Отзывы</Link>
+                                <Link href={"/company#requisites"} className={"static__link"}>Реквизиты</Link>
+                            </MobileMenu>
                         </div>
                     </div>
                 </HeaderMover>
