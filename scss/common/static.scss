@@ -158,3 +158,34 @@
         }
     }
 }
+
+@media (max-width: 660px) {
+    .static {
+        &__link {
+            font-size: 14px;
+            &_btn {
+                font-size: 14px;
+                padding: 10px 18px;
+                &._animate {
+                    font-size: 14px;
+                }
+            }
+        }
+        &__info {
+            font-size: 14px;
+            a, span, h1 {
+                font-size: 14px;
+            }
+        }
+
+    }
+}
+@media (max-width: 390px) {
+    .static {
+        &__link {
+            &_btn {
+                padding: 8px 16px;
+            }
+        }
+    }
+}

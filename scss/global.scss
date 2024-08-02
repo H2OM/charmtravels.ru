@@ -55,7 +55,11 @@ section {
         width: auto;
     }
 }
-@media (max-width: 560px) {
+@media (max-width: 660px) {
     .container {
+        padding: 0 10px;
+    }
+    section {
+        padding-top: 120px;
     }
 }

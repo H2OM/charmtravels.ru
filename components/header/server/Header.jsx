@@ -105,25 +105,7 @@ export default function Header() {
                                         fill="white"></path>
                                 </svg>
                             </Link>
-                            <MobileMenu>
-                                <Link href={"/hot"} className={"static__link"} data-adapt={'1130'}>Горящие туры</Link>
-                                <Link href={"/faq"} className={"static__link"} data-adapt={'1130'}>Часто задаваемые вопросы</Link>
-                                <Link href={"/contacts"} className={"static__link "} data-adapt={'780'}>Контакты</Link>
-                                <div className={"header__nav__mobile__menu__title"}>Услуги</div>
-                                <Link href={"/services#prices"} className={"static__link"}>Цены</Link>
-                                <Link href={"/services#tours"} className={"static__link"}>Туры</Link>
-                                <Link href={"/services#hotels"} className={"static__link"}>Отели</Link>
-                                <Link href={"/services#cruises"} className={"static__link"}>Круизы</Link>
-                                <Link href={"/services#excursions"} className={"static__link"}>Экскурсии</Link>
-                                <div className={"header__nav__mobile__menu__title"}>О компании</div>
-                                <Link href={"/company#about"} className={"static__link"}>О нас</Link>
-                                <Link href={"/company#team"} className={"static__link"}>Наша команда</Link>
-                                <Link href={"/company#stages"} className={"static__link"}>Этапы нашей работы</Link>
-                                <Link href={"/company#advantages"} className={"static__link"}>Наши преимущества</Link>
-                                <Link href={"/company#pick"} className={"static__link"}>Почему нас выбирают</Link>
-                                <Link href={"/company#reviews"} className={"static__link"}>Отзывы</Link>
-                                <Link href={"/company#requisites"} className={"static__link"}>Реквизиты</Link>
-                            </MobileMenu>
+                            <MobileMenu/>
                         </div>
                     </div>
                 </HeaderMover>

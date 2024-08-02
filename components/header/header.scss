@@ -8,6 +8,7 @@
         &__logo {
             height: auto;
             width: auto;
+            object-fit: contain;
         }
     }
 
@@ -17,6 +18,7 @@
         left: 0;
         z-index: 50;
         width: 100%;
+
         &_collapse {
             position: fixed;
             animation: nav-slide-down 0.4s forwards ease-out;
@@ -41,6 +43,7 @@
             padding: 16px 44px;
             width: 1700px;
             margin: 0 auto;
+
             &__buttons {
                 display: flex;
                 width: fit-content;
@@ -253,6 +256,7 @@
 @media (max-width: 1730px) {
     .header__nav {
         padding: 0 20px;
+
         &__wrap {
             width: auto;
             margin: 0;
@@ -314,11 +318,15 @@
     .header__nav__mobile {
         &__menu {
             display: block;
-            .header__nav__mobile__menu__title {
+            z-index: 100;
+
+            &__title {
                 display: none;
             }
+
             .static__link {
                 display: none;
+
                 &[data-adapt='1130'] {
                     display: block;
                 }
@@ -343,11 +351,13 @@
     }
     .header__nav {
         top: 120px;
+
         &__navigation {
             .static__link[data-adapt='780'] {
                 display: none;
             }
         }
+
         &__mobile {
             &__menu {
                 .static__link {
@@ -361,22 +371,90 @@
 }
 
 @media (max-width: 660px) {
-    .header__nav__navigation {
-        .static__link {
-            display: none;
+    .header {
+        &__static {
+            height: 80px;
+            padding: 10px 0;
+            gap: 40px;
         }
-    }
-    .header__nav__mobile {
-        &__menu {
-            .static__link {
-                    display: block;
+        &__nav {
+            padding: 0 10px;
+            top: 80px;
+            &__wrap {
+                padding: 12px 20px;
+            }
+
+            &__navigation {
+                .static__link {
+                    display: none;
+                }
+            }
+
+            &__mobile {
+                &__menu {
+                    .header__nav__open__menu {
+                        width: calc(100vw - 20px);
+                        right: -21px;
+                        top: 48px;
+                    }
+
+                    .static__link, &__title {
+                        display: block;
+                        font-size: 14px;
+                    }
+
+                    &__block {
+                        &._active {
+                            .header__nav__mobile__menu__title {
+                                &:before {
+                                    filter: brightness(1);
+                                    transform: rotate(180deg) translateY(50%);
+                                }
+                            }
+                        }
+
+                        .header__nav__mobile__menu__title {
+                            position: relative;
+
+                            &:before {
+                                content: '';
+                                position: absolute;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                transform-origin: center center;
+                                right: 26px;
+                                width: 11px;
+                                height: 9px;
+                                background-image: url("./../../public/svg/link-arrow.svg");
+                                filter: brightness(0.4);
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                                transition: 0.2s all linear;
+                            }
+                        }
+
+                        &__content {
+                            overflow: hidden;
+                            height: 0;
+                            transition: 0.2s all;
+                        }
+                    }
+                }
+            }
+
+            .header__nav__wrap__buttons {
+                width: 100%;
+
+                .static__link_btn {
+                    margin-right: auto;
+                }
             }
         }
     }
+}
+
+@media (max-width: 390px) {
     .header__nav__wrap__buttons {
-        width: 100%;
-        .static__link_btn {
-            margin-right: auto;
-        }
+        gap: 26px;
     }
 }
