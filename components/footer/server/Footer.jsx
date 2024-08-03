@@ -14,7 +14,7 @@ export default function Footer() {
                 </h2>
                 <SubsForm>
                     <input name={"mail"} type={"email"} className={"footer__fly__form__input"}
-                           placeholder={"Введите адрес электронной почты"}/>
+                           placeholder={"Электронная почта"}/>
                     <button className={"footer__fly__form__submit"} type={"submit"}>Подписаться</button>
                 </SubsForm>
             </div>
@@ -42,18 +42,6 @@ export default function Footer() {
                         <div className="footer__content__main__block">
                             <div className="footer__content__main__block__section">
                                 <div className="footer__content__main__block__section__title">
-                                    Услуги
-                                </div>
-                                <div className="footer__content__main__block__section__items">
-                                    <Link href={"/services#prices"} className={"static__link"}>Цены</Link>
-                                    <Link href={"/services#tours"} className={"static__link"}>Туры</Link>
-                                    <Link href={"/services#hotels"} className={"static__link"}>Отели</Link>
-                                    <Link href={"/services#cruises"} className={"static__link"}>Круизы</Link>
-                                    <Link href={"/services#excursions"} className={"static__link"}>Экскурсии</Link>
-                                </div>
-                            </div>
-                            <div className="footer__content__main__block__section">
-                                <div className="footer__content__main__block__section__title">
                                     О компании
                                 </div>
                                 <div className="footer__content__main__block__section__items">
@@ -66,6 +54,18 @@ export default function Footer() {
                                     <Link href={"/company#reviews"} className={"static__link"}>Отзывы</Link>
                                     <Link href={"/company#requisites"} className={"static__link"}>Реквизиты</Link>
                                     <Link href={"/contacts"} className={"static__link"}>Контакты</Link>
+                                </div>
+                            </div>
+                            <div className="footer__content__main__block__section">
+                                <div className="footer__content__main__block__section__title">
+                                    Услуги
+                                </div>
+                                <div className="footer__content__main__block__section__items">
+                                    <Link href={"/services#prices"} className={"static__link"}>Цены</Link>
+                                    <Link href={"/services#tours"} className={"static__link"}>Туры</Link>
+                                    <Link href={"/services#hotels"} className={"static__link"}>Отели</Link>
+                                    <Link href={"/services#cruises"} className={"static__link"}>Круизы</Link>
+                                    <Link href={"/services#excursions"} className={"static__link"}>Экскурсии</Link>
                                 </div>
                             </div>
                             <div className="footer__content__main__block__section">

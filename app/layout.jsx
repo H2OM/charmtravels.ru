@@ -115,7 +115,7 @@ export default async function RootLayout({children}) {
             <main>
                 {children}
             </main>
-            {/*<Footer/>*/}
+            <Footer/>
         </ClientProvider>
         </body>
         </html>

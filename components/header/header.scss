@@ -380,6 +380,17 @@
         &__nav {
             padding: 0 10px;
             top: 80px;
+            &_collapse {
+                animation: nav-slide-down660 0.4s forwards ease-out;
+                @keyframes nav-slide-down660 {
+                    from {
+                        top: -50%;
+                    }
+                    to {
+                        top: 15px;
+                    }
+                }
+            }
             &__wrap {
                 padding: 12px 20px;
             }

@@ -6,7 +6,7 @@ import ClientContext from "@/lib/context/ClientContext";
 export default function HeaderMover({children}) {
     const {scroll} = useContext(ClientContext);
     const ref = useRef(null);
-    const [refInfo, setRefInfo] = useState({refHeight: 0, refTop: 0, refY: 0});
+    const [refInfo, setRefInfo] = useState({refHeight: 0, refTop: 0, refY: 0, fixed: 0});
 
     useEffect(() => {
 
@@ -15,15 +15,16 @@ export default function HeaderMover({children}) {
         setRefInfo({
             refHeight: info.height,
             refTop: Number(window.getComputedStyle(ref.current).top.replace("px", "")),
-            refY: info.top
+            refY: info.top,
+            fixed: window.innerWidth > 660 ? 30 : 15
         });
 
     }, [ref]);
 
     useEffect(() => {
-        if(scroll > (refInfo.refHeight + refInfo.refTop + 30) && !ref.current.classList.contains('header__nav_collapse')) {
+        if(scroll > (refInfo.refHeight + refInfo.refTop + refInfo.fixed) && !ref.current.classList.contains('header__nav_collapse')) {
             ref.current.classList.add('header__nav_collapse');
-        } else if(scroll <= (refInfo.refTop - 30) && ref.current.classList.contains('header__nav_collapse')) {
+        } else if(scroll <= (refInfo.refTop - refInfo.fixed) && ref.current.classList.contains('header__nav_collapse')) {
             ref.current.classList.remove('header__nav_collapse');
         }
 

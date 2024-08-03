@@ -17,12 +17,12 @@ html {
 
 html,
 body {
+    overflow-x: hidden;
     max-width: 100vw;
     background-color: $seven;
 }
 
 body {
-    overflow-x: hidden;
     &::-webkit-scrollbar-button {
         display: none;
     }

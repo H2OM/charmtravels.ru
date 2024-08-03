@@ -151,6 +151,22 @@
     }
 }
 
+@media (max-width: 800px) {
+    .static {
+        &__title {
+            font-size: 32px;
+        }
+        &__subtitle {
+            font-size: 22px;
+        }
+        &__subtitle2 {
+            font-size: 26px;
+        }
+        &__content {
+            font-size: 18px;
+        }
+    }
+}
 @media (max-width: 780px) {
     .static__info {
         a, span, h1 {
