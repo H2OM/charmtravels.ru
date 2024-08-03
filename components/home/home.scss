@@ -2,7 +2,7 @@
     &__banner {
         display: flex;
         gap: 10vw;
-        transition: 0.4s all cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        transition: 0.6s all ease-in-out;
 
         &__wrap {
             position: relative;
@@ -55,7 +55,6 @@
             .static__subtitle2 {
                 position: relative;
                 z-index: 5;
-                font-size: 28px;
                 color: $seven;
             }
 
@@ -285,6 +284,86 @@
 
                 span {
                     color: $gray;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    .home {
+        &__banner {
+            &__slide {
+                height: 550px;
+                padding-top: 76px;
+                padding-left: 76px;
+                gap: 34px;
+                .static__title {
+                    font-size: 42px;
+                }
+                .static__link_btn._animate {
+                    font-size: 18px;
+                }
+            }
+            &__wrap {
+
+            }
+            &__pagination {
+                &__dot {
+                    width: 60px;
+                    &._active {
+                        width: 90px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 660px) {
+    .home {
+        &__banner {
+            &__slide {
+                height: 450px;
+                padding-top: 70px;
+                padding-left: 20px;
+                gap: 40px;
+                .static__title {
+                    font-size: 38px;
+                }
+                .static__link_btn._animate {
+                    font-size: 16px;
+                    width: 220px;
+                }
+            }
+            &__pagination {
+                &__dot {
+                    width: 50px;
+                    &._active {
+                        width: 70px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 520px) {
+    .home {
+        &__banner {
+            &__slide {
+                padding-top: 50px;
+                gap: 45px;
+                .static__title {
+                    font-size: 26px;
+                }
+                .static__link_btn._animate {
+                    font-size: 14px;
+                    width: 190px;
+                }
+            }
+            &__pagination {
+                &__dot {
+                    &._active {
+                    }
                 }
             }
         }
