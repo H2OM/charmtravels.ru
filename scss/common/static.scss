@@ -155,6 +155,7 @@
     .static {
         &__title {
             font-size: 32px;
+            margin-bottom: 40px;
         }
         &__subtitle {
             font-size: 22px;
@@ -181,7 +182,7 @@
             //font-size: 32px;
         }
         &__subtitle {
-            //font-size: 22px;
+            font-size: 20px;
         }
         &__subtitle2 {
             font-size: 24px;
@@ -198,6 +199,8 @@
                     padding-left: 30px;
                     padding-right: 30px;
                     font-size: 14px;
+                    min-width: unset;
+                    width: 100%;
                     &:after {
                         width: 6px;
                         height: 6px;
@@ -214,13 +217,13 @@
 
     }
 }
-@media (max-width: 490px) {
+@media (max-width: 540px) {
     .static {
         &__title {
             //font-size: 32px;
         }
         &__subtitle {
-            //font-size: 22px;
+            font-size: 18px;
         }
         &__subtitle2 {
             font-size: 20px;
@@ -228,15 +231,52 @@
         &__content {
             //font-size: 18px;
         }
+        &__link {
+            &_btn {
+                &._animate {
+                    padding-left: 30px;
+                    padding-right: 30px;
+                    padding-top: 8px;
+                    padding-bottom: 8px;
+                    &:after {
+                        right: 16px;
+                        width: 4px;
+                        height: 4px;
+                    }
+                }
+            }
+        }
     }
 }
-
-
+@media (max-width: 420px) {
+    .static {
+        &__subtitle {
+            font-size: 16px;
+        }
+        &__subtitle2 {
+            font-size: 18px;
+        }
+        &__link {
+            &_btn {
+                padding: 8px 16px;
+                &._animate {
+                    padding: 6px 0;
+                    &:after {
+                        content: unset;
+                    }
+                }
+            }
+        }
+    }
+}
 @media (max-width: 390px) {
     .static {
         &__link {
             &_btn {
                 padding: 8px 16px;
+                &._animate {
+                    font-size: 12px;
+                }
             }
         }
     }

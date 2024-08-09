@@ -82,8 +82,8 @@ export default function Home({banner, hot, prices, reviews, advantages}) {
                     !banner && <ErrorBlock/>
                 }
             </div>
-            {/*<Hot data={hot}/>*/}
-            {/*<Prices data={prices}/>*/}
+            <Hot data={hot}/>
+            <Prices data={prices}/>
             {/*<Advantages data={advantages}/>*/}
             {/*<section className={"promo-one"}>*/}
             {/*    <div className="container">*/}
