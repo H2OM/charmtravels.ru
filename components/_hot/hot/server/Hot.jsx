@@ -67,8 +67,8 @@ export default function Hot({data}) {
                             <div className="static__title">Подключитесь к ленте горящих туров</div>
                             <div className="static__subtitle2">В своем мессенджере</div>
                             <div className="hot__banner__split__under">
-                                <Link href={'https://t.me/charmtravelhot'} className={"static__link_btn _animate"} target={"_blank"}>Telegram</Link>
-                                <Link href={'https://chat.whatsapp.com/Hg9wPPEoLH9095eOlG3SaE'} className={"static__link_btn _animate"} target={"_blank"}>WhatsApp</Link>
+                                <Link href={'https://t.me/charmtravelhot'} className={"static__link_btn _animate _pN"} target={"_blank"}>Telegram</Link>
+                                <Link href={'https://chat.whatsapp.com/Hg9wPPEoLH9095eOlG3SaE'} className={"static__link_btn _animate _pN"} target={"_blank"}>WhatsApp</Link>
                             </div>
                         </div>
                     </div>

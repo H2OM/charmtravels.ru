@@ -83,7 +83,7 @@ export default function Home({banner, hot, prices, reviews, advantages}) {
                 }
             </div>
             <Hot data={hot}/>
-            <Prices data={prices}/>
+            {/*<Prices data={prices}/>*/}
             {/*<Advantages data={advantages}/>*/}
             {/*<section className={"promo-one"}>*/}
             {/*    <div className="container">*/}

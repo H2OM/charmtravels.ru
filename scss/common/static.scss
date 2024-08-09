@@ -179,7 +179,7 @@
 @media (max-width: 660px) {
     .static {
         &__title {
-            //font-size: 32px;
+            font-size: 28px;
         }
         &__subtitle {
             font-size: 20px;
@@ -204,6 +204,7 @@
                     &:after {
                         width: 6px;
                         height: 6px;
+                        right: 14px;
                     }
                 }
             }
@@ -220,7 +221,7 @@
 @media (max-width: 540px) {
     .static {
         &__title {
-            //font-size: 32px;
+            font-size: 28px;
         }
         &__subtitle {
             font-size: 18px;
@@ -250,6 +251,12 @@
 }
 @media (max-width: 420px) {
     .static {
+        &__title {
+            font-size: 24px;
+        }
+        &__content {
+            //font-size: 18px;
+        }
         &__subtitle {
             font-size: 16px;
         }
@@ -260,6 +267,9 @@
             &_btn {
                 padding: 8px 16px;
                 &._animate {
+                    &._pN {
+                        padding: 6px 14px;
+                    }
                     padding: 6px 0;
                     &:after {
                         content: unset;
