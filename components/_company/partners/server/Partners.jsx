@@ -25,7 +25,6 @@ export default function Partners() {
         'ARTTOUR_Logo_CIAN.png',
     ];
 
-
     return (
         <section className={"partners"} id={"partners"}>
             <div className={"container"}>
@@ -42,14 +41,14 @@ export default function Partners() {
                             partners.map((each,i)=>{
                                 return (
                                     <div className={"partners__grid__item"}
+                                         key={each + i}
                                          style={{transition: `0.2s ${0.4 + 0.1 * i}s all`}}>
                                         <Image
                                             src={"/company/partners/"+each}
                                             className={"partners__grid__item__image"}
                                             alt={"logo"}
-                                            height={0}
-                                            width={0}
-                                            sizes={"100vw"}
+                                            height={100}
+                                            width={300}
                                             quality={100}
                                             priority={true}
                                             key={each + i}

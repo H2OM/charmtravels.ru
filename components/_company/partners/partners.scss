@@ -41,3 +41,25 @@
         }
     }
 }
+
+@media (max-width: 1000px) {
+    .partners__grid {
+        gap: 6px;
+    }
+}
+@media (max-width: 768px) {
+    .partners__grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+@media (max-width: 600px) {
+    .partners__grid {
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 20px;
+    }
+}
+@media (max-width: 490px) {
+    .partners__grid__item__image {
+        height: 18vw;
+    }
+}
