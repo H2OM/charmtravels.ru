@@ -126,132 +126,130 @@ export default function Home({banner, hot, prices, reviews, advantages}) {
                 </div>
             </section>
             <Reviews data={reviews}/>
-            {/*<section className={"promo-two"}>*/}
-            {/*    <div className="container">*/}
-            {/*        <ContentVisible>*/}
-            {/*            <div className="promo-two__content">*/}
-            {/*                <div className="promo-two__content__big"*/}
-            {/*                     style={{transition: `0.4s 0.2s all`}}>*/}
-            {/*                    <div className={"static__content"}>Не знаете, куда поехать?</div>*/}
-            {/*                    <div className="static__title">*/}
-            {/*                        Доверьте подбор тура профессионалам!*/}
-            {/*                    </div>*/}
-            {/*                </div>*/}
-            {/*                <div className="promo-two__content__split">*/}
-            {/*                    <Image*/}
-            {/*                        src={'/other/image.png'}*/}
-            {/*                        className={"promo-two__content__block"}*/}
-            {/*                        alt={"image"}*/}
-            {/*                        height={200}*/}
-            {/*                        width={400}*/}
-            {/*                        quality={100}*/}
-            {/*                        priority={true}*/}
-            {/*                        style={{transition: `0.4s 0.4s all`}}*/}
-            {/*                    />*/}
-            {/*                    <Image*/}
-            {/*                        src={'/other/form.png'}*/}
-            {/*                        className={"promo-two__content__block"}*/}
-            {/*                        alt={"image"}*/}
-            {/*                        height={200}*/}
-            {/*                        width={400}*/}
-            {/*                        quality={100}*/}
-            {/*                        priority={true}*/}
-            {/*                        style={{transition: `0.4s 0.6s all`}}*/}
-            {/*                    />*/}
-            {/*                    <Image*/}
-            {/*                        src={'/other/image2.png'}*/}
-            {/*                        className={"promo-two__content__block"}*/}
-            {/*                        alt={"image"}*/}
-            {/*                        height={200}*/}
-            {/*                        width={400}*/}
-            {/*                        quality={100}*/}
-            {/*                        priority={true}*/}
-            {/*                        style={{transition: `0.4s 0.8s all`}}*/}
-            {/*                    />*/}
-            {/*                    <Image*/}
-            {/*                        src={'/services/tours/maldivs.png'}*/}
-            {/*                        className={"promo-two__content__block"}*/}
-            {/*                        alt={"image"}*/}
-            {/*                        height={200}*/}
-            {/*                        width={400}*/}
-            {/*                        quality={100}*/}
-            {/*                        priority={true}*/}
-            {/*                        style={{transition: `0.4s 1s all`}}*/}
-            {/*                    />*/}
-            {/*                </div>*/}
-            {/*            </div>*/}
-            {/*        </ContentVisible>*/}
-            {/*    </div>*/}
-            {/*</section>*/}
-            {/*<section className={"main-contacts"}>*/}
-            {/*    <div className="container">*/}
-            {/*        <h2 className={"static__title"}>С нами удобно связаться!</h2>*/}
-            {/*        <ContentVisible>*/}
-            {/*            <div className="main-contacts__bar">*/}
-            {/*                <div className="main-contacts__bar__block">*/}
-            {/*                    <Image*/}
-            {/*                        src={'/home/contacts/phone.svg'}*/}
-            {/*                        className={"main-contacts__bar__block__svg"}*/}
-            {/*                        alt={"image"}*/}
-            {/*                        height={60}*/}
-            {/*                        width={60}*/}
-            {/*                        quality={100}*/}
-            {/*                        priority={true}*/}
-            {/*                    />*/}
-            {/*                    <div className="main-contacts__bar__block__split">*/}
-            {/*                        <Link className={"static__link"} href={`tel:${process.env.phone}`}>*/}
-            {/*                            {process.env.phone}*/}
-            {/*                        </Link>*/}
-            {/*                        <span>*/}
-            {/*                            Телефон для связи*/}
-            {/*                        </span>*/}
-            {/*                    </div>*/}
-            {/*                </div>*/}
-            {/*                <div className="main-contacts__bar__block">*/}
-            {/*                    <Image*/}
-            {/*                        src={'/home/contacts/mail.svg'}*/}
-            {/*                        className={"main-contacts__bar__block__svg"}*/}
-            {/*                        alt={"image"}*/}
-            {/*                        height={60}*/}
-            {/*                        width={60}*/}
-            {/*                        quality={100}*/}
-            {/*                        priority={true}*/}
-            {/*                    />*/}
-            {/*                    <div className="main-contacts__bar__block__split">*/}
-            {/*                        <Link className={"static__link"} href={`email:${process.env.mail}`}>*/}
-            {/*                            {process.env.mail}*/}
-            {/*                        </Link>*/}
-            {/*                        <span>*/}
-            {/*                            Электронная почта*/}
-            {/*                        </span>*/}
-            {/*                    </div>*/}
-            {/*                </div>*/}
-            {/*                <div className="main-contacts__bar__block">*/}
-            {/*                    <Image*/}
-            {/*                        src={'/home/contacts/address.svg'}*/}
-            {/*                        className={"main-contacts__bar__block__svg"}*/}
-            {/*                        alt={"image"}*/}
-            {/*                        height={60}*/}
-            {/*                        width={60}*/}
-            {/*                        quality={100}*/}
-            {/*                        priority={true}*/}
-            {/*                    />*/}
-            {/*                    <div className="main-contacts__bar__block__split">*/}
-            {/*                        <div className={"static__link"}>*/}
-            {/*                            {process.env.address}*/}
-            {/*                        </div>*/}
-            {/*                        <span>*/}
-            {/*                            Адрес*/}
-            {/*                        </span>*/}
-            {/*                    </div>*/}
-            {/*                </div>*/}
-            {/*            </div>*/}
-            {/*            <iframe*/}
-            {/*                src="https://yandex.ru/map-widget/v1/?um=constructor%3A64a179e6d9e282e9aaa606bc7d07ab40c38d8d5611ab5856ae2188f14ea5efc1&amp;source=constructor"*/}
-            {/*                width="100%" height="504" frameBorder="0" style={{borderRadius: "16px"}}></iframe>*/}
-            {/*        </ContentVisible>*/}
-            {/*    </div>*/}
-            {/*</section>*/}
+            <section className={"promo-two"}>
+                <div className="container">
+                    <ContentVisible>
+                        <div className="promo-two__content">
+                            <div className="promo-two__content__big"
+                                 style={{transition: `0.4s 0.2s all`}}>
+                                <div className={"static__content"}>Не знаете, куда поехать?</div>
+                                <div className="static__title">
+                                    Доверьте подбор тура профессионалам!
+                                </div>
+                            </div>
+                            <Image
+                                src={'/other/image.png'}
+                                className={"promo-two__content__block"}
+                                alt={"image"}
+                                height={200}
+                                width={400}
+                                quality={100}
+                                priority={true}
+                                style={{transition: `0.4s 0.4s all`}}
+                            />
+                            <Image
+                                src={'/other/form.png'}
+                                className={"promo-two__content__block"}
+                                alt={"image"}
+                                height={200}
+                                width={400}
+                                quality={100}
+                                priority={true}
+                                style={{transition: `0.4s 0.6s all`}}
+                            />
+                            <Image
+                                src={'/other/image2.png'}
+                                className={"promo-two__content__block"}
+                                alt={"image"}
+                                height={200}
+                                width={400}
+                                quality={100}
+                                priority={true}
+                                style={{transition: `0.4s 0.8s all`}}
+                            />
+                            <Image
+                                src={'/services/tours/maldivs.png'}
+                                className={"promo-two__content__block"}
+                                alt={"image"}
+                                height={200}
+                                width={400}
+                                quality={100}
+                                priority={true}
+                                style={{transition: `0.4s 1s all`}}
+                            />
+                        </div>
+                    </ContentVisible>
+                </div>
+            </section>
+            <section className={"main-contacts"}>
+                <div className="container">
+                    <h2 className={"static__title"}>С нами удобно связаться!</h2>
+                    <ContentVisible>
+                        <div className="main-contacts__bar">
+                            <div className="main-contacts__bar__block">
+                                <Image
+                                    src={'/home/contacts/phone.svg'}
+                                    className={"main-contacts__bar__block__svg"}
+                                    alt={"image"}
+                                    height={60}
+                                    width={60}
+                                    quality={100}
+                                    priority={true}
+                                />
+                                <div className="main-contacts__bar__block__split">
+                                    <Link className={"static__link"} href={`tel:${process.env.phone}`}>
+                                        {process.env.phone}
+                                    </Link>
+                                    <span>
+                                        Телефон для связи
+                                    </span>
+                                </div>
+                            </div>
+                            <div className="main-contacts__bar__block">
+                                <Image
+                                    src={'/home/contacts/mail.svg'}
+                                    className={"main-contacts__bar__block__svg"}
+                                    alt={"image"}
+                                    height={60}
+                                    width={60}
+                                    quality={100}
+                                    priority={true}
+                                />
+                                <div className="main-contacts__bar__block__split">
+                                    <Link className={"static__link"} href={`email:${process.env.mail}`}>
+                                        {process.env.mail}
+                                    </Link>
+                                    <span>
+                                        Электронная почта
+                                    </span>
+                                </div>
+                            </div>
+                            <div className="main-contacts__bar__block">
+                                <Image
+                                    src={'/home/contacts/address.svg'}
+                                    className={"main-contacts__bar__block__svg"}
+                                    alt={"image"}
+                                    height={60}
+                                    width={60}
+                                    quality={100}
+                                    priority={true}
+                                />
+                                <div className="main-contacts__bar__block__split">
+                                    <div className={"static__link"}>
+                                        {process.env.address}
+                                    </div>
+                                    <span>
+                                        Адрес
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <iframe
+                            src="https://yandex.ru/map-widget/v1/?um=constructor%3A64a179e6d9e282e9aaa606bc7d07ab40c38d8d5611ab5856ae2188f14ea5efc1&amp;source=constructor"
+                            width="100%" height="504" frameBorder="0" style={{borderRadius: "16px"}}></iframe>
+                    </ContentVisible>
+                </div>
+            </section>
             {/*<Consult/>*/}
         </section>
     )

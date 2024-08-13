@@ -48,6 +48,7 @@ main {
 }
 section {
     padding-top: 135px;
+
 }
 @media (max-width: 1730px) {
     .container {
@@ -56,11 +57,25 @@ section {
     }
 }
 
+@media (max-width: 800px) {
+    section {
+        &._mpt {
+            padding-top: 70px;
+        }
+    }
+}
 @media (max-width: 660px) {
     .container {
         padding: 0 10px;
     }
     section {
         padding-top: 120px;
+    }
+}
+@media (max-width: 420px) {
+    section {
+        &._mpt {
+            padding-top: 40px;
+        }
     }
 }

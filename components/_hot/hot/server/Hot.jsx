@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Hot({data}) {
     return (
-        <section className={"hot"}>
+        <section className={"hot _mpt"}>
             <div className="container">
                 <h2 className={"static__title"}>Горящие туры</h2>
                 {

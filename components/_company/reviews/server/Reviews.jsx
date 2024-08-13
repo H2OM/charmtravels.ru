@@ -6,7 +6,7 @@ import ReviewsSlider from "@/components/_company/reviews/client/ReviewsSlider";
 
 export default function Reviews({data}) {
     return (
-        <section className={"reviews"} id={"reviews"}>
+        <section className={"reviews _mpt"} id={"reviews"}>
             <div className="container">
                 <h2 className={"static__title"}>Отзывы</h2>
                 <ContentVisible>

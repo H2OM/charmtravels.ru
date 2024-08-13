@@ -222,7 +222,7 @@
 @media (max-width: 540px) {
     .static {
         &__title {
-            font-size: 28px;
+            font-size: 26px;
         }
         &__subtitle {
             font-size: 18px;
@@ -254,6 +254,7 @@
     .static {
         &__title {
             font-size: 24px;
+            margin-bottom: 30px;
         }
         &__content {
             font-size: 14px;

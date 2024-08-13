@@ -159,7 +159,6 @@
 @media (max-width: 800px) {
     .hot {
         &__content {
-
             &__block {
                 padding: 14px;
                 gap: 14px;
@@ -179,12 +178,15 @@
             height: 440px;
             gap: 30px;
             padding: 0 12px;
+            margin-top: 120px;
+
             &__image {
                 height: 370px;
                 width: 320px;
                 align-self: flex-end;
                 margin-top: 0;
             }
+
             &__split {
                 &__under {
                     flex-wrap: wrap;
@@ -196,8 +198,14 @@
 }
 
 @media (max-width: 660px) {
-    .hot__content__block__image {
-        height: 36vw;
+    .hot {
+        &__content__block__image {
+            height: 36vw;
+        }
+
+        &__banner {
+            margin-top: 80px;
+        }
     }
 }
 
@@ -208,11 +216,14 @@
             padding-top: 40px;
             gap: 70px;
             height: auto;
+
             &__image {
                 align-self: center;
             }
+
             &__split {
                 text-align: center;
+
                 &__under {
                     justify-content: center;
                 }
@@ -220,6 +231,7 @@
         }
     }
 }
+
 @media (max-width: 540px) {
     .hot__content {
         gap: 8px;
@@ -260,5 +272,10 @@
                 }
             }
         }
+    }
+}
+@media (max-width: 390px) {
+    .hot__banner {
+        margin-top: 60px;
     }
 }

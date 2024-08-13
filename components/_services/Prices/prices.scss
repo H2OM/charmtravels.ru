@@ -181,8 +181,17 @@
                 padding: 9px 18px;
             }
         }
-        &__inprices__content {
-            grid-template-columns: 1fr 1fr;
+        &__inprices {
+            &__content {
+                grid-template-columns: 1fr 1fr;
+            }
+            &__block {
+                &__number {
+                    width: 45px;
+                    height: 45px;
+                    font-size: 18px;
+                }
+            }
         }
     }
 }
