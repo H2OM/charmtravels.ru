@@ -1,37 +1,45 @@
 .reviews {
     overflow-x: hidden;
+
     .visible-content {
         &_visible {
             .reviews__text {
                 transform: translateX(0%);
             }
+
             .reviews__slider {
                 &__pagination,
                 .static__nav__left,
                 .static__nav__right {
                     opacity: 1;
                 }
+
                 &__block {
                     transform: translateY(0%);
                 }
             }
-            .reviews__2gis{
+
+            .reviews__2gis {
                 &__text {
                     opacity: 1;
                 }
+
                 &__content {
                     opacity: 1;
                 }
             }
         }
     }
+
     .reviews__text {
         transition: 0.6s all ease-out;
         transform: translateX(-80%);
     }
+
     &__slider {
         position: relative;
         margin-top: 40px;
+
         &__wrap {
             margin: 0 100px;
             overflow: hidden;
@@ -55,6 +63,7 @@
             text-align: center;
             margin: 0 20px;
             transform: translateY(100%);
+
             &__image {
                 height: 500px;
                 width: fit-content;
@@ -62,6 +71,7 @@
                 box-shadow: 10px 10px 0px 0px $six;
             }
         }
+
         &__pagination {
             margin-top: 54px;
             display: flex;
@@ -69,6 +79,7 @@
             gap: 14px;
             transition: 0.4s 0.4s all;
             opacity: 0;
+
             &__dot {
                 width: 15px;
                 height: 15px;
@@ -76,27 +87,32 @@
                 border: 1px solid $five;
                 transition: 0.2s all;
                 cursor: pointer;
+
                 &.active {
                     background-color: $five;
                 }
             }
         }
+
         .static__nav__left, .static__nav__right {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
         }
+
         .static__nav__left {
             left: 0;
             opacity: 0;
             transition: 0.4s 0.4s all;
         }
+
         .static__nav__right {
             right: 0;
             opacity: 0;
             transition: 0.4s 0.4s all;
         }
     }
+
     &__2gis {
         &__text {
             text-align: center;
@@ -105,6 +121,7 @@
             opacity: 0;
             transition: 0.4s all;
         }
+
         &__content {
             transition: 0.4s 0.2s all;
             opacity: 0;
@@ -117,19 +134,83 @@
         &__wrap {
             margin: 0 36px;
         }
+
         &__block__image {
             height: 400px;
         }
     }
 }
+
 @media (max-width: 1140px) {
     .reviews__slider {
         &__wrap {
             margin: 0 36px;
         }
+
         &__block__image {
             height: 350px;
         }
     }
 }
 
+@media (max-width: 1000px) {
+    .reviews__slider {
+        &__window {
+            grid-template-columns: calc(100% / 2);
+            grid-auto-columns: calc(100% / 2);
+        }
+    }
+}
+
+@media (max-width: 730px) {
+    .reviews {
+        &__slider {
+            &__block {
+                &__image {
+                    height: 48vw;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 660px) {
+    .reviews__slider {
+        &__window {
+            grid-template-columns: calc(100%);
+            grid-auto-columns: calc(100%);
+        }
+        &__block {
+            &__image {
+                height: 74vw;
+            }
+        }
+        &__pagination {
+            margin-top: 40px;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .reviews__2gis__content {
+        height: 680px !important;
+    }
+}
+
+@media (max-width: 390px) {
+    .reviews__slider {
+        &__block {
+            &__image {
+                box-shadow: 5px 5px 0 0 rgb(210, 220, 211);
+            }
+        }
+        &__pagination {
+            margin-top: 28px;
+            gap: 8px;
+            &__dot {
+                height: 12px;
+                width: 12px;
+            }
+        }
+    }
+}

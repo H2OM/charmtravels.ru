@@ -1,8 +1,11 @@
 'use client';
 
-import {useEffect, useState} from "react";
+import {useContext, useEffect, useState} from "react";
+import clientContext from "@/lib/context/ClientContext";
+import TouchSlider from "@/lib/basecomponents/touchSlider/touchSlider";
 
 export default function ReviewsSlider({length, children}) {
+    const {isDesktop, clientWidth} = useContext(clientContext);
     const [currentSlide, setCurrentSlide] = useState(0);
     const [currentCount, setCurrentCount] = useState(1);
 
@@ -20,19 +23,34 @@ export default function ReviewsSlider({length, children}) {
     }
 
     useEffect(() => {
-
-        setCurrentCount(3);
-
-    }, []);
+        if(clientWidth > 1000) {
+            setCurrentCount(3);
+        } else if(clientWidth > 660) {
+            setCurrentCount(2);
+        } else {
+            setCurrentCount(1)
+        }
+    }, [clientWidth]);
 
     return (
         <div className={'reviews__slider__pagination__wrap'}>
             <div className="reviews__slider">
                 <div className="reviews__slider__wrap">
-                    <div className="reviews__slider__window"
-                         style={{transform: `translateX(calc(-${100 * currentSlide}%))`}}>
-                        {children}
-                    </div>
+                    {
+                        isDesktop ?
+                            <div className="reviews__slider__window"
+                                 style={{transform: `translateX(calc(-${100 * currentSlide}%))`}}>
+                                {children}
+                            </div>
+                            :
+                            <TouchSlider className={"reviews__slider__window"}
+                                         style={{transform: `translateX(calc(-${100 * currentSlide}%))`}}
+                                         length={Math.ceil(length / currentCount)}
+                                         setSlide={setCurrentSlide}>
+                                {children}
+                            </TouchSlider>
+                    }
+
                 </div>
                 <button className={"static__nav__left"} onClick={decSlider}></button>
                 <button className={"static__nav__right"} onClick={incSlider}></button>
