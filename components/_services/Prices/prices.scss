@@ -36,9 +36,7 @@
             display: grid;
             grid-template: "title price"
                             "text price";
-            height: fit-content;
-            height: -moz-fit-content;
-            height: -webkit-fit-content;
+            height: 100%;
             row-gap: 10px;
             column-gap: 30px;
             border: 0px solid #EAEAEA;
@@ -142,5 +140,62 @@
 
             }
         }
+    }
+}
+
+@media (max-width: 1460px) {
+    .prices {
+        &__content {
+            gap: 10px;
+        }
+    }
+}
+@media (max-width: 1000px) {
+    .prices {
+        &__content {
+            grid-template-columns: 1fr;
+            &__block {
+                &:nth-child(even) {
+                    .prices__content__block__title,
+                    .prices__content__block__text,
+                    .prices__content__block__price {
+                        transform: translateX(100vw);
+                    }
+                }
+                &:nth-child(odd) {
+                    .prices__content__block__title,
+                    .prices__content__block__text,
+                    .prices__content__block__price {
+                        transform: translateX(-100vw);
+                    }
+                }
+            }
+        }
+    }
+
+}
+@media (max-width: 660px) {
+    .prices {
+        &__content {
+            &__block {
+                padding: 9px 18px;
+            }
+        }
+        &__inprices__content {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+@media (max-width: 540px) {
+    .prices__content__block_sub .prices__content__block__title:after {
+        right: -97px;
+    }
+}
+@media (max-width: 420px) {
+    .prices__inprices__content {
+        row-gap: 40px;
+    }
+    .prices__content__block_sub .prices__content__block__title:after {
+        right: -89px;
     }
 }

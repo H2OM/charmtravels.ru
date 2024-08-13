@@ -39,21 +39,21 @@
 
         &__window {
             display: grid;
-            grid-template-columns: calc(100% / 3 - 27px);
-            grid-auto-columns: calc(100% / 3 - 27px);
+            grid-template-columns: calc(100% / 3);
+            grid-auto-columns: calc(100% / 3);
             grid-auto-flow: column;
             width: 100%;
             transition: 0.6s all;
-            gap: 40px;
         }
 
         &__block {
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
             gap: 24px;
             text-align: center;
+            margin: 0 20px;
             transform: translateY(100%);
             &__image {
                 height: 500px;
@@ -111,3 +111,25 @@
         }
     }
 }
+
+@media (max-width: 1400px) {
+    .reviews__slider {
+        &__wrap {
+            margin: 0 36px;
+        }
+        &__block__image {
+            height: 400px;
+        }
+    }
+}
+@media (max-width: 1140px) {
+    .reviews__slider {
+        &__wrap {
+            margin: 0 36px;
+        }
+        &__block__image {
+            height: 350px;
+        }
+    }
+}
+

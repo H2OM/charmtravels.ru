@@ -26,22 +26,24 @@ export default function ReviewsSlider({length, children}) {
     }, []);
 
     return (
-        <div className="reviews__slider">
-            <div className="reviews__slider__wrap">
-                <div className="reviews__slider__window"
-                     style={{transform: `translateX(calc(-${100 * currentSlide}% - ${40 * Number(Boolean(currentSlide))}px))`}}>
-                    {children}
+        <div className={'reviews__slider__pagination__wrap'}>
+            <div className="reviews__slider">
+                <div className="reviews__slider__wrap">
+                    <div className="reviews__slider__window"
+                         style={{transform: `translateX(calc(-${100 * currentSlide}%))`}}>
+                        {children}
+                    </div>
                 </div>
+                <button className={"static__nav__left"} onClick={decSlider}></button>
+                <button className={"static__nav__right"} onClick={incSlider}></button>
             </div>
-            <button className={"static__nav__left"} onClick={decSlider}></button>
-            <button className={"static__nav__right"} onClick={incSlider}></button>
             <div className={"reviews__slider__pagination"}>
                 {
                     Array.from({length: Math.ceil(length / currentCount)}).map((each, i) => {
                         return (
                             <div key={i}
                                  className={"reviews__slider__pagination__dot " + (currentSlide === i ? "active" : "")}
-                                 onClick={()=>setCurrentSlide(i)}></div>
+                                 onClick={() => setCurrentSlide(i)}></div>
                         )
                     })
                 }

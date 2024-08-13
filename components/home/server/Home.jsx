@@ -84,48 +84,48 @@ export default function Home({banner, hot, prices, reviews, advantages}) {
             </div>
             <Hot data={hot}/>
             <Prices data={prices}/>
-            {/*<Advantages data={advantages}/>*/}
-            {/*<section className={"promo-one"}>*/}
-            {/*    <div className="container">*/}
-            {/*        <h2 className={"static__title"}>Как забронировать тур</h2>*/}
-            {/*        <ContentVisible>*/}
-            {/*            <div className="promo-one__content">*/}
-            {/*                {*/}
-            {/*                    promoOne.map((each, i) => {*/}
-            {/*                        return (*/}
-            {/*                            <div className="promo-one__content__block"*/}
-            {/*                                 key={each.image + i}*/}
-            {/*                            style={{transition: `0.4s ${0.2 * i}s all`}}>*/}
-            {/*                                <div className="promo-one__content__block__split">*/}
-            {/*                                    <Image*/}
-            {/*                                        src={each.image}*/}
-            {/*                                        className={"promo-one__content__block__image"}*/}
-            {/*                                        alt={"image"}*/}
-            {/*                                        height={each.imageH}*/}
-            {/*                                        width={each.imageW}*/}
-            {/*                                        quality={100}*/}
-            {/*                                        priority={true}*/}
-            {/*                                    />*/}
-            {/*                                    <div className="static__content">*/}
-            {/*                                        {each.title}*/}
-            {/*                                    </div>*/}
-            {/*                                </div>*/}
-            {/*                                <div className="promo-one__content__block__number">0{i + 1}</div>*/}
-            {/*                            </div>*/}
-            {/*                        )*/}
-            {/*                    })*/}
-            {/*                }*/}
-            {/*                <div className="promo-one__content__block _last"*/}
-            {/*                     style={{transition: `0.4s ${0.2 * promoOne.length}s all`}}>*/}
-            {/*                    <div className="static__content">*/}
-            {/*                        Оформите заявку уже сейчас, это удобно!*/}
-            {/*                    </div>*/}
-            {/*                </div>*/}
-            {/*            </div>*/}
-            {/*        </ContentVisible>*/}
-            {/*    </div>*/}
-            {/*</section>*/}
-            {/*<Reviews data={reviews}/>*/}
+            <Advantages data={advantages}/>
+            <section className={"promo-one"}>
+                <div className="container">
+                    <h2 className={"static__title"}>Как забронировать тур</h2>
+                    <ContentVisible>
+                        <div className="promo-one__content">
+                            {
+                                promoOne.map((each, i) => {
+                                    return (
+                                        <div className="promo-one__content__block"
+                                             key={each.image + i}
+                                        style={{transition: `0.4s ${0.2 * i}s all`}}>
+                                            <div className="promo-one__content__block__split">
+                                                <Image
+                                                    src={each.image}
+                                                    className={"promo-one__content__block__image"}
+                                                    alt={"image"}
+                                                    height={each.imageH}
+                                                    width={each.imageW}
+                                                    quality={100}
+                                                    priority={true}
+                                                />
+                                                <div className="static__content">
+                                                    {each.title}
+                                                </div>
+                                            </div>
+                                            <div className="promo-one__content__block__number">0{i + 1}</div>
+                                        </div>
+                                    )
+                                })
+                            }
+                            <div className="promo-one__content__block _last"
+                                 style={{transition: `0.4s ${0.2 * promoOne.length}s all`}}>
+                                <div className="static__content">
+                                    Оформите заявку уже сейчас, это удобно!
+                                </div>
+                            </div>
+                        </div>
+                    </ContentVisible>
+                </div>
+            </section>
+            <Reviews data={reviews}/>
             {/*<section className={"promo-two"}>*/}
             {/*    <div className="container">*/}
             {/*        <ContentVisible>*/}

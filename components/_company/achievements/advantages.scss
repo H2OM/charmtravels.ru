@@ -81,3 +81,42 @@
         }
     }
 }
+@media (max-width: 798px) {
+    .advantages .visible-content {
+        gap: 30px;
+    }
+}
+@media (max-width: 660px) {
+    .advantages {
+        .visible-content {
+            gap: 16px;
+        }
+        &__block {
+            gap: 30px;
+            &__wrap {
+                gap: 10px;
+            }
+            &__count {
+                align-items: flex-start;
+                font-size: 96px;
+            }
+        }
+    }
+}
+@media (max-width: 420px) {
+    .advantages {
+        .visible-content {
+            gap: 4px;
+        }
+
+    }
+}
+@media (max-width: 390px) {
+    .advantages {
+        &__block {
+            &__count {
+                font-size: 84px;
+            }
+        }
+    }
+}
