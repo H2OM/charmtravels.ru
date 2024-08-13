@@ -4,7 +4,7 @@ import ContentVisible from "@/lib/basecomponents/contentVisible/contentVisible";
 
 export default function Prices({data}) {
     return (
-        <section className={"prices"} id={"prices"}>
+        <section className={"prices _mpt"} id={"prices"}>
             <div className="container">
                 <h2 className={"static__title"}>Цены</h2>
                 <ContentVisible>
@@ -49,7 +49,7 @@ export default function Prices({data}) {
                                         return (
                                             <div className={"prices__inprices__block"}
                                                  key={each + i}
-                                                 style={{transition: `0.2s ${0.2 * i}s all`}}>
+                                                 style={{transition: `0.4s ${0.2 * i}s all`}}>
                                                 <div className={"prices__inprices__block__number"}>{i + 1}</div>
                                                 <div className="static__content prices__inprices__block__text"
                                                      dangerouslySetInnerHTML={{__html: each}}></div>
