@@ -7,7 +7,7 @@ import TouchSlider from "@/lib/basecomponents/touchSlider/touchSlider";
 export default function HomeSlider({length, children}) {
     const {isDesktop} = useContext(clientContext);
     const [slide, setSlide] = useState(0);
-    const [touchPoint, setTouchPoint] = useState({start: 0, move: 0});
+
     useEffect(() => {
         const interval = setInterval(() => {
             setSlide(prev => {
@@ -18,7 +18,7 @@ export default function HomeSlider({length, children}) {
         }, 4000);
 
         return () => clearInterval(interval);
-    }, [length, slide, touchPoint]);
+    }, [length, slide]);
 
     return (
         <div className={"home__banner__wrap"}>

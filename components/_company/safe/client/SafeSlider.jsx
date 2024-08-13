@@ -8,7 +8,6 @@ export default function SafeSlider({length, children}) {
     const {isDesktop, clientWidth} = useContext(clientContext);
     const [currentSlide, setCurrentSlide] = useState(0);
     const [currentCount, setCurrentCount] = useState(1);
-    const [touchPoint, setTouchPoint] = useState({start: 0, move: 0});
 
     useEffect(() => {
         if(clientWidth > 1400) {
