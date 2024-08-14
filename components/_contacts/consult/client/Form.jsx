@@ -191,13 +191,11 @@ export default function Form() {
                                setErrors((prev) => ({...prev, policy: false}));
                            }
                        }}/>
-                Подтвердите свое согласие с условиями обработки персональных данных
+                Подтвердите свое согласие с условиями
                 <Link href={"/agreement"}
-                      className={"static__link"}
-                      style={{display: "inline"}}> политикой конфиденциальности
+                      className={"static__link"}> обработки персональных данных
                 </Link>
             </label>
-
         </form>
     )
 }

@@ -57,11 +57,24 @@ section {
     }
 }
 
+@media (max-width: 1480px) {
+    main {
+        padding-bottom: 260px;
+    }
+}
+@media (max-width: 1000px) {
+    main {
+        padding-bottom: 210px;
+    }
+}
 @media (max-width: 800px) {
     section {
         &._mpt {
             padding-top: 70px;
         }
+    }
+    main {
+        padding-bottom: 240px;
     }
 }
 @media (max-width: 660px) {

@@ -255,6 +255,16 @@
         padding-top: 240px;
         .footer__fly {
             width: calc(100vw - 20px);
+            border-radius: 10px;
+            &__form {
+                gap: 12px;
+                &__input {
+                    border-radius: 6px;
+                }
+                &__submit {
+                    border-radius: 6px;
+                }
+            }
             .static__title {
                 font-size: 28px;
             }
@@ -303,6 +313,7 @@
             &__form {
                 gap: 10px;
                 &__input, &__submit {
+                    text-align: center;
                     padding: 14px 20px;
                     font-size: 14px;
                 }

@@ -181,7 +181,7 @@ export default function Home({banner, hot, prices, reviews, advantages}) {
                     </ContentVisible>
                 </div>
             </section>
-            <section className={"main-contacts"}>
+            <section className={"main-contacts _mpt"}>
                 <div className="container">
                     <h2 className={"static__title"}>С нами удобно связаться!</h2>
                     <ContentVisible>
@@ -250,7 +250,7 @@ export default function Home({banner, hot, prices, reviews, advantages}) {
                     </ContentVisible>
                 </div>
             </section>
-            {/*<Consult/>*/}
+            <Consult/>
         </section>
     )
 }
