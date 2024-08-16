@@ -154,7 +154,7 @@ export default function Contacts() {
                         * - Принадлежит запрещенной в России организации Meta
                     </div>
                     <iframe
-                        src="https://yandex.ru/map-widget/v1/?um=constructor%3A64a179e6d9e282e9aaa606bc7d07ab40c38d8d5611ab5856ae2188f14ea5efc1&amp;source=constructor"
+                        src="https://yandex.ru/map-widget/v1/?um=constructor%3A64a179e6d9e282e9aaa606bc7d07ab40c38d8d5611ab5856ae2188f14ea5efc1&amp;source=constructor&scroll=false"
                         width="100%" height="504" frameBorder="0" style={{borderRadius: "16px"}}></iframe>
                 </ContentVisible>
             </div>

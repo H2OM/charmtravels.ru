@@ -107,7 +107,8 @@ export default function Form() {
     }, [message.open]);
 
     return (
-        <form className={"consult__form " + (isSubmitting ? "_submitting" : "")} noValidate={true} onSubmit={submitHandler}>
+        <form className={"consult__form " + (isSubmitting ? "_submitting" : "")} noValidate={true}
+              onSubmit={submitHandler}>
             {
                 message.open &&
                 <div className={
