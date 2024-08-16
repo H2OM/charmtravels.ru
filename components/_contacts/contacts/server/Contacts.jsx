@@ -7,7 +7,7 @@ export default function Contacts() {
 
     const OTHER = (process.env.other !== undefined ? JSON.parse(process.env.other).map((each, i) => {
         return (
-            <Link href={each.link} target={"_blank"} className={"static__link"} key={each.title + i}>{each.title}</Link>
+            <Link href={each.link} target={"_blank"} className={"static__link static__content"} key={each.title + i}>{each.title}</Link>
         )
     }) : false);
 
@@ -52,10 +52,10 @@ export default function Contacts() {
                             <div className="static__content">
                                 <span>Телефон:</span>
                                 <Link href={`tel:${process.env.phone}`}
-                                      className={"static__link"} target={"_blank"}>{process.env.phone}</Link>
+                                      className={"static__link static__content"} target={"_blank"}>{process.env.phone}</Link>
                                 <span>Электронна почта:</span>
                                 <Link href={`mailto: ${process.env.mail}`}
-                                      className={"static__link"} target={"_blank"}>{process.env.mail}</Link>
+                                      className={"static__link static__content"} target={"_blank"}>{process.env.mail}</Link>
                             </div>
                         </div>
                         <div className="contacts__grid__block" style={{transition: "transform 0.6s 0.4s"}}>

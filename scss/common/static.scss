@@ -165,6 +165,7 @@
         }
         &__content {
             font-size: 18px;
+            line-height: 32px;
         }
     }
 }
@@ -178,19 +179,6 @@
 
 @media (max-width: 660px) {
     .static {
-        &__title {
-            font-size: 28px;
-        }
-        &__subtitle {
-            font-size: 20px;
-        }
-        &__subtitle2 {
-            font-size: 24px;
-        }
-        &__content {
-            font-size: 16px;
-            line-height: 28px;
-        }
         &__link {
             font-size: 14px;
             &_btn {
@@ -209,6 +197,19 @@
                     }
                 }
             }
+        }
+        &__title {
+            font-size: 28px;
+        }
+        &__subtitle {
+            font-size: 20px;
+        }
+        &__subtitle2 {
+            font-size: 24px;
+        }
+        &__content {
+            font-size: 16px;
+            line-height: 28px;
         }
         &__info {
             font-size: 14px;
