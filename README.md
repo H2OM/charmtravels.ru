@@ -1,2 +1,2 @@
 # Проект находится в разработке...
-## Адресс sub.techwebdev.net
+## Адрес sub.techwebdev.net
